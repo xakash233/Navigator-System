@@ -46,7 +46,7 @@ const ServiceDetail = ({ service }: { service: ServiceData }) => {
                                 <div className="row">
                                     <div className="col-lg-12">
                                         <div className="content">
-                                            <h3>What's Included</h3>
+                                            <h3>What&rsquo;s Included</h3>
                                             <ul className="feature-list-item">
                                                 {service.features.map((feature, index) => (
                                                     <li key={index}>{feature}</li>
