@@ -1,7 +1,7 @@
 import TechnologyV2Data from "@/assets/jsonData/technology/TechnologyV2Data.json"
 import SingleTechnologyV2 from "./SingleTechnologyV2";
 import TechFactV2Data from "@/assets/jsonData/fact/TechFactV2Data.json"
-import TechFactV2 from "../fact/TechFactV2";
+import SingleFact from "../fact/SingleFact";
 
 const TechnologyV2 = () => {
     return (
@@ -17,7 +17,7 @@ const TechnologyV2 = () => {
                                 </div>
                                 <div className="right-info">
                                     {TechFactV2Data.map(fact =>
-                                        <TechFactV2 fact={fact} key={fact.id} />
+                                        <SingleFact fact={fact} key={fact.id} />
                                     )}
                                 </div>
                             </div>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ExerciseV1Data from "@/assets/jsonData/exercise/ExerciseV1Data.json"
-import ProgressV1 from "../progress/ProgressV1";
+import SkillProgress from "../progress/SkillProgress";
 
 const ExerciseV1 = () => {
     return (
@@ -32,7 +32,7 @@ const ExerciseV1 = () => {
                                 <Image src="/assets/img/about/11.jpg" alt="Image Not Found" width={800} height={470} />
                                 <div className="skill-items">
                                     {ExerciseV1Data.map(progress =>
-                                        <ProgressV1 progress={progress} key={progress.id} />
+                                        <SkillProgress skill={progress} key={progress.id} />
                                     )}
                                 </div>
                             </div>

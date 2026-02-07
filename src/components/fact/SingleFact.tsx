@@ -3,12 +3,13 @@ import Counter from "../counter/Counter";
 interface DataType {
     id: number;
     value: number;
-    operator: string;
+    operator?: string;
+    suffix?: string;
     label: string;
 }
 
 const SingleFact = ({ fact }: { fact: DataType }) => {
-    const { value, operator, label } = fact;
+    const { value, operator, suffix, label } = fact;
 
     return (
         <>
@@ -16,7 +17,7 @@ const SingleFact = ({ fact }: { fact: DataType }) => {
                 <div className="fun-fact">
                     <div className="counter">
                         <div className="timer"><Counter end={value} /></div>
-                        <div className="operator">{operator}</div>
+                        <div className="operator">{operator || suffix}</div>
                     </div>
                     <span className="medium">{label}</span>
                 </div>

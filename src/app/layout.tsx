@@ -22,7 +22,10 @@ import ScrollUpBtn from '@/components/utilities/ScrollUpBtn';
 
 export const metadata: Metadata = {
   title: "Navigator System - Reliable IT Support & Modern Engineering",
-  description: "Navigator System helps organizations maintain critical server, storage, and network infrastructure with maximum uptime — while also delivering web, mobile, cloud, and automation solutions."
+  description: "Navigator System helps organizations maintain critical server, storage, and network infrastructure with maximum uptime — while also delivering web, mobile, cloud, and automation solutions.",
+  icons: {
+    icon: '/assets/img/navigator-logo-favicon.svg',
+  }
 };
 
 export default function RootLayout({
