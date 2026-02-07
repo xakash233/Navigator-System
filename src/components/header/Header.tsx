@@ -26,7 +26,9 @@ const HeaderV3 = () => {
                     <div className="container nav-box d-flex justify-content-between align-items-center">
                         <div className="navbar-header">
                             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" onClick={openMenu}>
-                                <i className="fa fa-bars" />
+                                <span className="icon-bar" />
+                                <span className="icon-bar" />
+                                <span className="icon-bar" />
                             </button>
                             <Link className="navbar-brand" href="/">
                                 <Image src={siteContent.brand.logo} className="logo logo-display" alt="Logo" width={545} height={185} />

@@ -1,4 +1,4 @@
-
+"use client";
 import React from 'react';
 import { siteContent } from "@/data/siteContent";
 import SplitText from "../animation/SplitText";

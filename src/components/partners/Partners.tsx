@@ -1,4 +1,4 @@
-
+"use client";
 import React from 'react';
 import Image from "next/image";
 import { siteContent } from "@/data/siteContent";
@@ -43,11 +43,7 @@ const Partners = () => {
                                             style={{ objectFit: 'contain', width: 'auto', maxHeight: '60px' }}
                                         />
                                     </div>
-                                    {partner.status && (
-                                        <span style={{ fontSize: '12px', fontWeight: 'bold', color: '#718096', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                                            {partner.status}
-                                        </span>
-                                    )}
+
                                 </div>
                             ))}
                         </div>

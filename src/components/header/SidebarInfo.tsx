@@ -25,7 +25,6 @@ const SidebarInfo = ({ isInfoOpen, openInfoBar, closeInfoBar, searchOpen }: Side
                         </li>
                         <li className="side-menu">
                             <Link href="#" scroll={false} onClick={openInfoBar}>
-                                <span className="bar-1" />
                                 <span className="bar-2" />
                                 <span className="bar-3" />
                             </Link>

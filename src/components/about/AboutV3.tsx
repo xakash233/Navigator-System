@@ -1,3 +1,4 @@
+"use client";
 import { siteContent } from "@/data/siteContent";
 import SplitText from "../animation/SplitText";
 

@@ -14795,3 +14795,22 @@ footer.footer-style-two .f-item.about::after {
 	color: #fff;
 	position: relative;
 }
+
+/* Sidebar Logo Background Removal */
+.side .widget .logo::after {
+	display: none !important;
+}
+
+/* Hamburger customization - if using icon-bar */
+.navbar-toggle .icon-bar {
+	background-color: var(--color-heading) !important;
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin-top: 4px;
+	transition: all 0.35s ease;
+}
+
+.navbar-toggle .icon-bar:first-child {
+	display: none !important;
+}

@@ -1,7 +1,7 @@
 
 "use client"
 import React from 'react';
-import Image from "next/image";
+
 import { siteContent } from "@/data/siteContent";
 import SplitText from "../animation/SplitText";
 
@@ -27,7 +27,7 @@ const ClientsV1 = () => {
                                 <div className="item" key={index} data-aos="fade-up" data-aos-delay={index * 50} style={{ maxWidth: '180px', filter: 'grayscale(100%)', opacity: 0.7, transition: '0.3s' }}
                                     onMouseEnter={(e) => { e.currentTarget.style.filter = 'grayscale(0%)'; e.currentTarget.style.opacity = '1'; }}
                                     onMouseLeave={(e) => { e.currentTarget.style.filter = 'grayscale(100%)'; e.currentTarget.style.opacity = '0.7'; }}>
-                                    <Image src={client.logo} alt={client.name} width={150} height={80} style={{ objectFit: 'contain', width: 'auto', maxHeight: '80px' }} />
+                                    <img src={client.logo} alt={client.name} style={{ objectFit: 'contain', width: 'auto', maxHeight: '80px', maxWidth: '150px' }} />
                                 </div>
                             ))}
                         </div>

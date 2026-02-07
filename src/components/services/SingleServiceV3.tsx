@@ -20,7 +20,7 @@ const SingleServiceV3 = ({ service }: { service: ServiceType }) => {
                 height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
-                padding: '40px',
+                padding: '15px', // Balanced padding
                 background: '#fff',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
                 borderRadius: '15px',
@@ -32,21 +32,30 @@ const SingleServiceV3 = ({ service }: { service: ServiceType }) => {
                     height: '100%'
                 }}>
                     <div className="icon" style={{
-                        marginBottom: '25px',
-                        width: '70px',
-                        height: '70px',
+                        marginBottom: '15px',
+                        width: '60px',
+                        height: '60px',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         background: '#f8fafc',
                         borderRadius: '12px'
                     }}>
-                        <Image src={`/assets/img/icon/${icon}`} alt={title} width={50} height={50} style={{ objectFit: 'contain' }} />
+                        <Image
+                            src={`/assets/img/icon/${icon}`}
+                            alt={title}
+                            width={40}
+                            height={40}
+                            style={{
+                                objectFit: 'contain',
+                                filter: (id === 'cloud-services' || id === 'ai-automation') ? 'invert(1) brightness(0)' : 'none'
+                            }}
+                        />
                     </div>
                     <h3 style={{
                         fontSize: '22px',
                         fontWeight: '700',
-                        marginBottom: '15px',
+                        marginBottom: '10px',
                         minHeight: '54px',
                         display: 'flex',
                         alignItems: 'center'
@@ -57,19 +66,20 @@ const SingleServiceV3 = ({ service }: { service: ServiceType }) => {
                         fontSize: '15px',
                         color: '#718096',
                         lineHeight: '1.6',
-                        marginBottom: '25px',
-                        flexGrow: 1
+                        marginBottom: '15px',
                     }}>
                         {summary.length > 110 ? summary.substring(0, 110) + "..." : summary}
                     </p>
-                    <Link href={`/${category}/${id}`} className="btn-more" style={{
-                        fontWeight: '600',
-                        color: '#3182CE',
+                    <Link href={`/${category}/${id}`} style={{
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '8px'
+                        marginTop: 'auto',
+                        textDecoration: 'none',
+                        color: '#3182CE',
+                        fontWeight: '700',
+                        fontSize: '15px'
                     }}>
-                        Read More <i className="fas fa-arrow-right"></i>
+                        <span>Read More</span>
                     </Link>
                 </div>
             </div>

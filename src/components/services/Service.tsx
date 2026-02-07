@@ -23,7 +23,8 @@ const ServiceV3 = () => {
 
     return (
         <>
-            <div className="services-style-three-area default-padding-top half-bg-dark" style={{ backgroundImage: 'url(/assets/img/shape/service_bg_shape.png)' }}>
+
+            <div className="services-style-three-area default-padding-top half-bg-dark" style={{ backgroundImage: 'url(/assets/img/shape/service_bg_shape.png)', paddingBottom: '80px' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2">
@@ -73,7 +74,7 @@ const ServiceV3 = () => {
                                 modules={[Pagination, Navigation, Keyboard, Autoplay]}
                             >
                                 {featuredServices.map(service =>
-                                    <SwiperSlide key={service.id}>
+                                    <SwiperSlide key={service.id} style={{ height: 'auto' }}>
                                         <SingleServiceV3 service={service} />
                                     </SwiperSlide>
                                 )}
