@@ -3,6 +3,7 @@ import { siteContent } from "@/data/siteContent";
 import SingleServiceV3 from "./SingleServiceV3";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
+import SplitText from "../animation/SplitText";
 
 const ServiceV3 = () => {
     // Collect all services
@@ -29,7 +30,7 @@ const ServiceV3 = () => {
                             <div className="site-heading text-center">
                                 <h4 className="sub-title">Featured Services</h4>
                                 <h2 className="title">
-                                    Comprehensive IT Solutions
+                                    <SplitText delay={50}>Comprehensive IT Solutions</SplitText>
                                 </h2>
                                 <div className="devider" />
                             </div>

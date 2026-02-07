@@ -7,6 +7,14 @@ import { siteContent } from "@/data/siteContent";
 const FooterV1 = () => {
     return (
         <>
+            <style jsx>{`
+                .footer-item ul li a:hover {
+                    color: #3182CE !important;
+                }
+                .footer-bottom ul li a:hover {
+                    color: #fff !important;
+                }
+            `}</style>
             <footer className="bg-light" style={{ backgroundImage: 'url(/assets/img/shape/map-light.png)', backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
                 <div className="container">
                     <div className="f-items relative pt-70 pb-120 pt-xs-0 pb-xs-50">

@@ -15,6 +15,7 @@ const MainMenu = ({ navbarPlacement }: DataType) => {
                         <li><Link href="/">Home</Link></li>
                         <li><Link href="/about">About Us</Link></li>
                         <li><Link href="/leadership-team">Leadership / Team</Link></li>
+                        <li><Link href="/partners">Strategic Partners</Link></li>
                         <li><Link href="/careers">Careers</Link></li>
                         <li><Link href="/contact">Contact</Link></li>
                     </ul>

@@ -41,7 +41,7 @@ const SidebarInfo = ({ isInfoOpen, openInfoBar, closeInfoBar, searchOpen }: Side
                         <Image src={siteContent.brand.logo} alt="Logo" width={545} height={185} />
                     </div>
                     <p>
-                        Arrived compass prepare an on as. Reasonable particular on my it in sympathize. Size now easy eat hand how. Unwilling he departure elsewhere dejection at. Heart large seems may purse means few blind.
+                        Navigator System is a leading technology services company specializing in IT infrastructure support and modern digital solutions. With over 20 years of experience, we ensure your critical systems stay uptime-first while you focus on building what’s next.
                     </p>
                 </div>
                 <div className="widget address">
@@ -50,19 +50,19 @@ const SidebarInfo = ({ isInfoOpen, openInfoBar, closeInfoBar, searchOpen }: Side
                             <li>
                                 <div className="content">
                                     <p>Address</p>
-                                    <strong>California, TX 70240</strong>
+                                    <strong>{siteContent.brand.address}</strong>
                                 </div>
                             </li>
                             <li>
                                 <div className="content">
                                     <p>Email</p>
-                                    <strong>support@validtheme.com</strong>
+                                    <strong>{siteContent.brand.email}</strong>
                                 </div>
                             </li>
                             <li>
                                 <div className="content">
                                     <p>Contact</p>
-                                    <strong>+44-20-7328-4499</strong>
+                                    <strong>{siteContent.brand.phone}</strong>
                                 </div>
                             </li>
                         </ul>
