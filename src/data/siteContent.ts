@@ -4,7 +4,10 @@ export const siteContent = {
         tagline: "Keep Your Infrastructure Running. Build What’s Next.",
         phone: "",
         email: "",
-        address: ""
+        address: "",
+        logo: "/assets/img/navigator-systems-logo.svg",
+        logoLight: "/assets/img/navigator-systems-logo.svg", // Assuming same logo for now, or use a specific light version if available
+        logoIcon: "/assets/img/navigator-logo-only.svg"
     },
     home: {
         heroSlider: [
@@ -53,17 +56,64 @@ export const siteContent = {
         },
         servicesOverview: {
             title: "What We Do",
+            subtitle: "Overview",
             items: [
                 {
+                    icon: "flaticon-server",
                     title: "Infrastructure Support",
                     description: "Server maintenance, AMC, network maintenance, data center support, helpdesk/FMS, and IT operations management."
                 },
                 {
+                    icon: "flaticon-cloud-computing",
                     title: "Technology Delivery",
                     description: "Website & app development, UI/UX, branding, e-commerce, software engineering, cloud services, and AI automation."
                 }
             ]
-        }
+        },
+        industries: [
+            { title: "IT & SaaS", icon: "fas fa-laptop-code" },
+            { title: "Manufacturing", icon: "fas fa-industry" },
+            { title: "Healthcare", icon: "fas fa-heartbeat" },
+            { title: "Education", icon: "fas fa-graduation-cap" },
+            { title: "Logistics", icon: "fas fa-shipping-fast" },
+            { title: "Retail & E-commerce", icon: "fas fa-shopping-cart" },
+            { title: "BFSI", icon: "fas fa-university" },
+            { title: "Professional Services", icon: "fas fa-briefcase" }
+        ],
+        howWeWork: [
+            {
+                step: "01",
+                title: "Assess",
+                description: "Understand your infrastructure or product scope, risks, dependencies, and business goals."
+            },
+            {
+                step: "02",
+                title: "Plan",
+                description: "Recommend a maintenance plan or delivery roadmap with clear SLAs, timelines, and commercials."
+            },
+            {
+                step: "03",
+                title: "Execute",
+                description: "Deploy engineers, monitoring, and delivery teams with structured reporting and escalations."
+            }
+        ],
+        ctaBanner: {
+            title: "Ready to improve uptime or launch your next build?",
+            subtitle: "Talk to our team for a tailored plan and quote.",
+            btnText: "Get Started",
+            btnLink: "/talk-to-our-team",
+            bgImage: "/assets/img/shape/banner-8.jpg"
+        },
+        clients: [
+            { name: "TCS", logo: "/assets/img/partners/tcs.svg" },
+            { name: "Ideal Invent", logo: "/assets/img/partners/ideal-invent.svg" },
+            { name: "HCL", logo: "/assets/img/partners/hcl.svg" },
+            { name: "Ericsson", logo: "/assets/img/partners/ericsson.svg" },
+            { name: "Misys", logo: "/assets/img/partners/misys.svg" },
+            { name: "Nokia Siemens Networks", logo: "/assets/img/partners/nokia.svg" },
+            { name: "CGI", logo: "/assets/img/partners/cgi.svg" },
+            { name: "Mphasis", logo: "/assets/img/partners/mphasis.svg" }
+        ]
     },
     about: {
         title: "About Us",
@@ -73,12 +123,20 @@ export const siteContent = {
             { title: "Transparency", description: "Transparent SLAs and measurable service outcomes" },
             { title: "Security", description: "Security-first practices and controlled access" },
             { title: "Modernization", description: "Practical modernization — optimize, extend lifecycle, and migrate when needed" }
+        ],
+        differentiators: [
+            "Preventive maintenance + remote monitoring to catch issues early",
+            "Multi-OEM expertise across Dell, HP, IBM, Cisco, and more",
+            "Pan-India service capability with structured escalation",
+            "A single partner for ongoing maintenance plus new engineering delivery"
         ]
     },
     services: {
         infrastructure: [
             {
                 id: "server-maintenance-support",
+                category: "infrastructure",
+                icon: "icon-server.png",
                 title: "Server Maintenance & Support",
                 summary: "Cost-effective server maintenance and support designed to maximize uptime, reduce risk, and extend the lifecycle of your server assets — including multi-OEM environments and mixed x86/UNIX estates.",
                 features: [
@@ -87,10 +145,23 @@ export const siteContent = {
                     "Remote monitoring (optional): proactive alerts to prevent failures",
                     "Hardware replacement with compatible spares (as per contract scope)",
                     "Performance tuning support and incident root cause analysis"
-                ]
+                ],
+                whoIsItFor: [
+                    "Organizations with post-warranty servers",
+                    "Data centers seeking predictable annual maintenance",
+                    "Teams needing multi-brand support under one vendor"
+                ],
+                keyBenefits: [
+                    "Lower cost compared to OEM renewals",
+                    "Reduced downtime and faster restoration",
+                    "Clear SLA-driven response and escalation"
+                ],
+                ctaLine: "Get a Server Maintenance Plan and SLA proposal in 24-48 hours."
             },
             {
                 id: "amc-services",
+                category: "infrastructure",
+                icon: "icon-contract.png",
                 title: "AMC (Annual Maintenance Contract)",
                 summary: "Comprehensive IT hardware AMC for servers (including OS support as applicable), storage devices, and networking devices — designed for maximum uptime through quick breakdown resolution and preventive maintenance.",
                 features: [
@@ -102,6 +173,8 @@ export const siteContent = {
             },
             {
                 id: "network-maintenance",
+                category: "infrastructure",
+                icon: "icon-network.png",
                 title: "Network Maintenance",
                 summary: "Network support services covering routing, switching, wireless, LAN, VPN security, and VOIP — ensuring stable connectivity and secure access across your offices and sites.",
                 features: [
@@ -114,6 +187,8 @@ export const siteContent = {
             },
             {
                 id: "data-center-solutions",
+                category: "infrastructure",
+                icon: "icon-datacenter.png",
                 title: "Data Center Solutions",
                 summary: "Data center services to design, improve, and maintain facilities and systems — including capacity planning, maintenance governance, and operational best practices.",
                 features: [
@@ -125,6 +200,8 @@ export const siteContent = {
             },
             {
                 id: "it-operations-management",
+                category: "infrastructure",
+                icon: "icon-itom.png",
                 title: "IT Operations Management (ITOM)",
                 summary: "Improve service delivery through structured IT operations management — service desk workflows, monitoring, automation, and reporting designed to reduce incidents and speed resolution.",
                 features: [
@@ -147,6 +224,9 @@ export const siteContent = {
         technology: [
             {
                 id: "website-development",
+                category: "technology",
+                icon: "7.png",
+                heroImage: "/assets/img/banner/7.jpg",
                 title: "Website Development",
                 summary: "Modern, fast, secure websites that are easy to manage and built to convert — including corporate sites, service portals, and product websites.",
                 features: [
@@ -159,6 +239,9 @@ export const siteContent = {
             },
             {
                 id: "ui-ux-design",
+                category: "technology",
+                icon: "8.png",
+                heroImage: "/assets/img/banner/8.jpg",
                 title: "UI/UX Design",
                 summary: "User-first interface design that improves usability, reduces friction, and supports business outcomes — from websites to internal dashboards.",
                 features: [
@@ -170,6 +253,9 @@ export const siteContent = {
             },
             {
                 id: "branding-strategy",
+                category: "technology",
+                icon: "9.png",
+                heroImage: "/assets/img/banner/9.jpg",
                 title: "Branding & Strategy",
                 summary: "Brand foundations and messaging that clarify your positioning and make your digital presence consistent across touchpoints.",
                 features: [
@@ -181,6 +267,9 @@ export const siteContent = {
             },
             {
                 id: "mobile-app-development",
+                category: "technology",
+                icon: "10.png",
+                heroImage: "/assets/img/banner/10.jpg",
                 title: "Mobile App Development",
                 summary: "iOS/Android app development for customer apps and internal operations — built for performance, stability, and maintainability.",
                 features: [
@@ -192,6 +281,9 @@ export const siteContent = {
             },
             {
                 id: "ecommerce-solutions",
+                category: "technology",
+                icon: "11.png",
+                heroImage: "/assets/img/banner/hero-slide-2.jpg",
                 title: "E-Commerce Solutions",
                 summary: "E-commerce builds and upgrades that improve catalog management, payments, order operations, and customer experience.",
                 features: [
@@ -203,6 +295,9 @@ export const siteContent = {
             },
             {
                 id: "seo-sem",
+                category: "technology",
+                icon: "12.png",
+                heroImage: "/assets/img/banner/hero-slide-3.jpg",
                 title: "SEO & SEM",
                 summary: "Search visibility services focused on technical SEO, content structure, and measurable search performance — plus paid search campaigns where required for immediate demand.",
                 features: [
@@ -215,6 +310,9 @@ export const siteContent = {
             },
             {
                 id: "software-development",
+                category: "technology",
+                icon: "13.png",
+                heroImage: "/assets/img/banner/hero-slide-4.jpg",
                 title: "Software Development",
                 summary: "Custom software engineering for portals, internal tools, integrations, and business automation — with clean architecture and documentation.",
                 features: [
@@ -226,6 +324,9 @@ export const siteContent = {
             },
             {
                 id: "cloud-services",
+                category: "technology",
+                icon: "14.png",
+                heroImage: "/assets/img/banner/infra-service.jpg",
                 title: "Cloud Services",
                 summary: "Cloud strategy and implementation to improve reliability, scalability, and cost governance — including hybrid approaches where required.",
                 features: [
@@ -237,6 +338,9 @@ export const siteContent = {
             },
             {
                 id: "ai-automation",
+                category: "technology",
+                icon: "15.png",
+                heroImage: "/assets/img/banner/tech-service.jpg",
                 title: "AI / Automation",
                 summary: "Practical automation and AI-assisted workflows to reduce repetitive work, improve response times, and create better visibility for operations.",
                 features: [

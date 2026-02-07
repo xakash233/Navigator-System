@@ -1,5 +1,5 @@
 import ProgressV1Data from "@/assets/jsonData/progress/ProgressV1Data.json"
-import ProgressV1 from "../progress/ProgressV1";
+import SkillProgress from "../progress/SkillProgress";
 
 const MissionTab = () => {
     return (
@@ -22,7 +22,7 @@ const MissionTab = () => {
                         </p>
                         <div className="progress-style-one">
                             {ProgressV1Data.map(progress =>
-                                <ProgressV1 key={progress.id} progress={progress} />
+                                <SkillProgress key={progress.id} skill={progress} />
                             )}
                         </div>
                     </div>

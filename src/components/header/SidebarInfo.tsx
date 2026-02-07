@@ -3,6 +3,8 @@ import Link from "next/link";
 import HeaderNewsLetter from "../form/HeaderNewsLetter";
 import SocialShareV4 from "../social/SocialShareV4";
 
+import { siteContent } from "@/data/siteContent";
+
 interface SidebarInfoProps {
     openInfoBar: () => void;
     isInfoOpen: boolean;
@@ -36,7 +38,7 @@ const SidebarInfo = ({ isInfoOpen, openInfoBar, closeInfoBar, searchOpen }: Side
                 <Link href="#" className="close-side" onClick={closeInfoBar}><i className="icon_close" /></Link>
                 <div className="widget">
                     <div className="logo">
-                        <Image src="/assets/img/logo-light-solid.png" alt="Logo" width={545} height={185} />
+                        <Image src={siteContent.brand.logo} alt="Logo" width={545} height={185} />
                     </div>
                     <p>
                         Arrived compass prepare an on as. Reasonable particular on my it in sympathize. Size now easy eat hand how. Unwilling he departure elsewhere dejection at. Heart large seems may purse means few blind.

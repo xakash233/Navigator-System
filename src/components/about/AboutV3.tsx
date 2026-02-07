@@ -1,13 +1,12 @@
-import Image from "next/image";
 import { siteContent } from "@/data/siteContent";
 
 const AboutV3 = () => {
     return (
         <>
-            <div className="about-style-three-area overflow-hidden bg-gray default-padding-top shape-light-bottom">
+            <div className="about-style-three-area overflow-hidden bg-gray default-padding-top">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6 about-style-three">
+                        <div className="col-lg-12 about-style-three">
                             <h4 className="sub-title">Why Navigator System</h4>
                             <h2 className="title">
                                 Uptime-First IT Support & Modern Digital Solutions
@@ -16,42 +15,29 @@ const AboutV3 = () => {
                                 {siteContent.about.description}
                             </p>
 
-                            <div className="list-item-style-two mt-30">
-                                <ul>
-                                    {siteContent.about.values.slice(0, 3).map((val, index) => (
-                                        <li key={index}><i className="fas fa-check-circle"></i> {val.description}</li>
-                                    ))}
-                                </ul>
-                            </div>
+                            <div className="row mt-30">
+                                <div className="col-lg-6">
+                                    <h4 className="mb-20">What We Stand For</h4>
+                                    <ul className="list-unstyled">
+                                        {siteContent.about.values.map((val, index) => (
+                                            <li key={index}><i className="fas fa-check-circle"></i> {val.description}</li>
+                                        ))}
+                                    </ul>
+                                </div>
 
-                            <div className="thumb mt-50 mt-xs-30">
-                                <Image src="/assets/img/banner/9.jpg" alt="Image Not Found" width={1200} height={675} />
-                            </div>
-                        </div>
-                        <div className="col-lg-5 offset-lg-1 about-style-three">
-
-                            <div className="content">
-                                <h3>Industries We Serve</h3>
-                                <ul className="check-list-item">
-                                    <li>IT & SaaS</li>
-                                    <li>Manufacturing</li>
-                                    <li>Healthcare</li>
-                                    <li>Education</li>
-                                    <li>Logistics</li>
-                                    <li>Retail & E-commerce</li>
-                                    <li>BFSI</li>
-                                    <li>Professional Services</li>
-                                </ul>
-                            </div>
-
-                            <div className="company-autor mt-50">
-                                <div className="left-info">
-                                    <div className="content">
-                                        <h4>Need a Custom Plan?</h4>
-                                        <span>Talk to our engineers today.</span>
-                                    </div>
+                                <div className="col-lg-6">
+                                    <h4 className="mb-20">What Makes Us Different</h4>
+                                    <ul className="list-unstyled">
+                                        {siteContent.about.differentiators?.map((text, index) => (
+                                            <li key={index}><i className="fas fa-check-circle"></i> {text}</li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </div>
+
+
+
+
 
                         </div>
                     </div>
