@@ -3,6 +3,7 @@ import { siteContent } from "@/data/siteContent";
 import SingleServiceV3 from "./SingleServiceV3";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
+import SplitText from "../animation/SplitText";
 
 const ServiceV3 = () => {
     // Collect all services
@@ -22,14 +23,15 @@ const ServiceV3 = () => {
 
     return (
         <>
-            <div className="services-style-three-area default-padding-top half-bg-dark" style={{ backgroundImage: 'url(/assets/img/shape/service_bg_shape.png)' }}>
+
+            <div className="services-style-three-area default-padding-top half-bg-dark" style={{ backgroundImage: 'url(/assets/img/shape/service_bg_shape.png)', paddingBottom: '80px' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2">
                             <div className="site-heading text-center">
                                 <h4 className="sub-title">Featured Services</h4>
                                 <h2 className="title">
-                                    Comprehensive IT Solutions
+                                    <SplitText delay={50}>Comprehensive IT Solutions</SplitText>
                                 </h2>
                                 <div className="devider" />
                             </div>
@@ -72,7 +74,7 @@ const ServiceV3 = () => {
                                 modules={[Pagination, Navigation, Keyboard, Autoplay]}
                             >
                                 {featuredServices.map(service =>
-                                    <SwiperSlide key={service.id}>
+                                    <SwiperSlide key={service.id} style={{ height: 'auto' }}>
                                         <SingleServiceV3 service={service} />
                                     </SwiperSlide>
                                 )}

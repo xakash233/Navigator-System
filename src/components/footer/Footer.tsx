@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import NewsLetterForm from "../form/NewsLetterForm";
@@ -7,6 +8,7 @@ import { siteContent } from "@/data/siteContent";
 const FooterV1 = () => {
     return (
         <>
+
             <footer className="bg-light" style={{ backgroundImage: 'url(/assets/img/shape/map-light.png)', backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
                 <div className="container">
                     <div className="f-items relative pt-70 pb-120 pt-xs-0 pb-xs-50">

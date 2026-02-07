@@ -1,3 +1,5 @@
+import { siteContent } from "@/data/siteContent";
+
 const HeaderTopV2 = () => {
     return (
         <>
@@ -12,7 +14,7 @@ const HeaderTopV2 = () => {
                                     </div>
                                     <div className="info">
                                         <strong>Address</strong>
-                                        70240 Avenue of the Moon, California
+                                        {siteContent.brand.address}
                                     </div>
                                 </li>
                                 <li>
@@ -21,7 +23,7 @@ const HeaderTopV2 = () => {
                                     </div>
                                     <div className="info">
                                         <strong>Phone</strong>
-                                        <a href="tel:+4733378901">+4733378901</a>
+                                        <a href={`tel:${siteContent.brand.phone.replace(/\s+/g, '')}`}>{siteContent.brand.phone}</a>
                                     </div>
                                 </li>
                             </ul>
@@ -33,7 +35,7 @@ const HeaderTopV2 = () => {
                                 </div>
                                 <div className="info">
                                     <p>Have any Questions?</p>
-                                    <h5><a href="mailto:info@crysta.com">info@bestup.com</a></h5>
+                                    <h5><a href={`mailto:${siteContent.brand.email}`}>{siteContent.brand.email}</a></h5>
                                 </div>
                             </div>
                         </div>

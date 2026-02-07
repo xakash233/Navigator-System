@@ -3,6 +3,7 @@ import Link from "next/link";
 import { siteContent } from "@/data/siteContent";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
+import SplitText from "../animation/SplitText";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -20,7 +21,10 @@ const BannerV3 = () => {
                     loop={true}
                     autoplay={{ delay: 5000, disableOnInteraction: false }}
                     pagination={{ clickable: true }}
-                    navigation={true}
+                    navigation={{
+                        nextEl: ".banner-button-next",
+                        prevEl: ".banner-button-prev"
+                    }}
                     className="banner-style-three-carousel"
                 >
                     {heroSlider.map((slide) => (
@@ -31,10 +35,17 @@ const BannerV3 = () => {
                                     <div className="row align-center">
                                         <div className="col-xl-8 col-lg-9 col-md-11">
                                             <div className="content">
-                                                <h4 className="sub-title" data-animation="fadeInDown" data-delay="500ms" style={{ textTransform: 'uppercase', fontWeight: 700, color: '#3182CE', letterSpacing: '1px' }}>{slide.tagline}</h4>
-                                                <h2 className="title" data-animation="fadeInLeft" data-delay="800ms" style={{ fontSize: '60px', lineHeight: '1.1', fontWeight: 800, marginBottom: '20px' }}>{slide.title}</h2>
+                                                <h4 className="sub-title" style={{ textTransform: 'uppercase', fontWeight: 700, color: '#3182CE', letterSpacing: '1px' }}>
+                                                    {slide.tagline}
+                                                </h4>
+                                                <h2 className="title" style={{ fontSize: '60px', lineHeight: '1.1', fontWeight: 800, marginBottom: '20px' }}>
+                                                    <SplitText delay={50}>{slide.title}</SplitText>
+                                                </h2>
+                                                <p className="description" style={{ fontSize: '18px', color: '#4A5568', marginBottom: '30px', maxWidth: '600px' }}>
+                                                    {slide.subtitle}
+                                                </p>
 
-                                                <div className="button mt-30" data-animation="fadeInUp" data-delay="1200ms">
+                                                <div className="button mt-30">
                                                     <Link className="btn btn-theme btn-md animation" href="/contact">{slide.ctaPrimary}</Link>
                                                 </div>
                                             </div>
@@ -44,6 +55,43 @@ const BannerV3 = () => {
                             </div>
                         </SwiperSlide>
                     ))}
+                    {/* Custom Nav Buttons */}
+                    <div className="banner-button-prev" style={{
+                        position: 'absolute',
+                        left: '50px',
+                        top: '50%',
+                        transform: 'translateY(-50%)',
+                        width: '60px',
+                        height: '60px',
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        color: '#fff',
+                        borderRadius: '50%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        cursor: 'pointer',
+                        zIndex: 10
+                    }}>
+                        <i className="fas fa-chevron-left" style={{ fontSize: '24px' }}></i>
+                    </div>
+                    <div className="banner-button-next" style={{
+                        position: 'absolute',
+                        right: '50px',
+                        top: '50%',
+                        transform: 'translateY(-50%)',
+                        width: '60px',
+                        height: '60px',
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        color: '#fff',
+                        borderRadius: '50%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        cursor: 'pointer',
+                        zIndex: 10
+                    }}>
+                        <i className="fas fa-chevron-right" style={{ fontSize: '24px' }}></i>
+                    </div>
                 </Swiper>
             </div>
 
@@ -54,28 +102,40 @@ const BannerV3 = () => {
                         <div className="col-lg-12">
                             <div className="feature-style-two-items" style={{ marginTop: '-80px', position: 'relative', zIndex: 10, background: 'white', padding: '40px', borderRadius: '10px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
                                 <div className="row">
-                                    <div className="col-lg-3 col-md-6 feature-item">
-                                        <div className="info">
-                                            <h4>20+ Years</h4>
-                                            <p>In Business Experience</p>
+                                    <div className="col-lg-3 col-md-6 feature-item" data-aos="fade-up">
+                                        <div className="info" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                                            <i className="fas fa-history" style={{ fontSize: '30px', color: '#3182CE' }}></i>
+                                            <div>
+                                                <h4 style={{ margin: 0 }}>20+ Years</h4>
+                                                <p style={{ margin: 0 }}>In Business Experience</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="col-lg-3 col-md-6 feature-item">
-                                        <div className="info">
-                                            <h4>Multi-OEM</h4>
-                                            <p>Servers, Storage, Network Support</p>
+                                    <div className="col-lg-3 col-md-6 feature-item" data-aos="fade-up" data-aos-delay="100">
+                                        <div className="info" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                                            <i className="fas fa-server" style={{ fontSize: '30px', color: '#3182CE' }}></i>
+                                            <div>
+                                                <h4 style={{ margin: 0 }}>Multi-OEM</h4>
+                                                <p style={{ margin: 0 }}>Integrated Support</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="col-lg-3 col-md-6 feature-item">
-                                        <div className="info">
-                                            <h4>Cost Effective</h4>
-                                            <p>Third-party support vs OEM renewals</p>
+                                    <div className="col-lg-3 col-md-6 feature-item" data-aos="fade-up" data-aos-delay="200">
+                                        <div className="info" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                                            <i className="fas fa-hand-holding-usd" style={{ fontSize: '30px', color: '#3182CE' }}></i>
+                                            <div>
+                                                <h4 style={{ margin: 0 }}>Cost Effective</h4>
+                                                <p style={{ margin: 0 }}>Max Value Support</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="col-lg-3 col-md-6 feature-item">
-                                        <div className="info">
-                                            <h4>Pan-India</h4>
-                                            <p>Coverage with fast response</p>
+                                    <div className="col-lg-3 col-md-6 feature-item" data-aos="fade-up" data-aos-delay="300">
+                                        <div className="info" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                                            <i className="fas fa-map-marked-alt" style={{ fontSize: '30px', color: '#3182CE' }}></i>
+                                            <div>
+                                                <h4 style={{ margin: 0 }}>Pan-India</h4>
+                                                <p style={{ margin: 0 }}>Coverage & Response</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

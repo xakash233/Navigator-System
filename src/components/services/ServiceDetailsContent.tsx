@@ -3,6 +3,7 @@ import SingleFaq from "../faq/SingleFaq";
 import FaqV1Data from "@/assets/jsonData/faq/FaqV1Data.json"
 import Link from "next/link";
 import ServicesV1Data from "@/assets/jsonData/services/ServicesV1Data.json"
+import { siteContent } from "@/data/siteContent";
 
 interface DataType {
     title: string;
@@ -63,15 +64,15 @@ const ServiceDetailsContent = ({ serviceInfo }: { serviceInfo: DataType }) => {
                                 <div className="services-more mt-40">
                                     <h2>Popular Services</h2>
                                     <div className="row">
-                                        {ServicesV1Data.slice(1, 3).map(service =>
+                                        {[...siteContent.services.infrastructure, ...siteContent.services.technology].slice(1, 3).map(service => (
                                             <div className="col-md-6" key={service.id}>
                                                 <div className="item">
                                                     <Image src={`/assets/img/icon/${service.icon}`} alt="icon" className="mb-3" width={64} height={64} />
-                                                    <h4><Link href={`/service-details/${service.id}`}>{service.title}</Link></h4>
-                                                    <p> {service.description}</p>
+                                                    <h4><Link href={`/${service.category}/${service.id}`}>{service.title}</Link></h4>
+                                                    <p> {service.summary.substring(0, 100)}...</p>
                                                 </div>
                                             </div>
-                                        )}
+                                        ))}
                                     </div>
                                 </div>
                             </div>
@@ -80,12 +81,12 @@ const ServiceDetailsContent = ({ serviceInfo }: { serviceInfo: DataType }) => {
 
                                 {/* Single Widget */}
                                 <div className="single-widget services-list-widget">
-                                    <h4 className="widget-title">Techincal Services</h4>
+                                    <h4 className="widget-title">All Services</h4>
                                     <div className="content">
                                         <ul>
-                                            {ServicesV1Data.map(service =>
-                                                <li key={service.id}> <Link href={`/services-details/${service.id}`}>{service.title}</Link> </li>
-                                            )}
+                                            {[...siteContent.services.infrastructure, ...siteContent.services.technology].map(service => (
+                                                <li key={service.id}> <Link href={`/${service.category}/${service.id}`}>{service.title}</Link> </li>
+                                            ))}
                                         </ul>
                                     </div>
                                 </div>
@@ -98,8 +99,8 @@ const ServiceDetailsContent = ({ serviceInfo }: { serviceInfo: DataType }) => {
                                         <p>
                                             Speak with a human to filling out a form? call corporate office and we will connect you with a team member help.
                                         </p>
-                                        <h2><a href="tel:+(012) 6679545">+(012) 6679545</a></h2>
-                                        <h4><a href="mailto:info@digital.com">info@digital.com</a></h4>
+                                        <h2><a href={`tel:${siteContent.brand.phone.replace(/\s+/g, '')}`}>{siteContent.brand.phone}</a></h2>
+                                        <h4><a href={`mailto:${siteContent.brand.email}`}>{siteContent.brand.email}</a></h4>
                                         <Link className="btn mt-30 circle btn-sm btn-gradient" href="/contact-us">Contact Us</Link>
                                     </div>
                                 </div>

@@ -1,5 +1,6 @@
 import { siteContent } from "@/data/siteContent";
 import SingleFeatureV2 from "./SingleFeatureV2";
+import SplitText from "../animation/SplitText";
 
 const FeatureV2 = () => {
     return (
@@ -10,7 +11,9 @@ const FeatureV2 = () => {
                         <div className="col-lg-8 offset-lg-2">
                             <div className="site-heading text-center">
                                 <h4 className="sub-title">Overview</h4>
-                                <h2 className="title">What We Do</h2>
+                                <h2 className="title">
+                                    <SplitText delay={50}>What We Do</SplitText>
+                                </h2>
                                 <div className="devider" />
                             </div>
                         </div>

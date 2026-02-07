@@ -3,6 +3,7 @@ import SocialShareV3 from "../social/SocialShareV3";
 import Link from "next/link";
 import TeamListItem from "./TeamListItem";
 import SkillProgress from "../progress/SkillProgress";
+import { siteContent } from "@/data/siteContent";
 
 interface DataType {
     id: number;
@@ -49,11 +50,11 @@ const TeamDetailsContent = ({ teamInfo }: { teamInfo: DataType }) => {
                                 <ul>
                                     <li>
                                         <strong>Email:</strong>
-                                        <a href="mailto:support@digital.com">support@digital.com</a>
+                                        <a href={`mailto:${siteContent.brand.email}`}>{siteContent.brand.email}</a>
                                     </li>
                                     <li>
                                         <strong>Phone:</strong>
-                                        <a href="tel:123-456-7890">+44-20-7328-4499</a>
+                                        <a href={`tel:${siteContent.brand.phone.replace(/\s+/g, '')}`}>{siteContent.brand.phone}</a>
                                     </li>
                                 </ul>
                                 <div className="social">

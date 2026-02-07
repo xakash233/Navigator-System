@@ -103,7 +103,7 @@ const ServiceDetail = ({ service }: { service: ServiceData }) => {
                                         <div className="col-md-6" key={s.id}>
                                             <div className="item">
                                                 <div className="info">
-                                                    <h4><Link href={`/services/${s.id}`}>{s.title}</Link></h4>
+                                                    <h4><Link href={`/${s.category}/${s.id}`}>{s.title}</Link></h4>
                                                     <p>{s.summary.substring(0, 80)}...</p>
                                                 </div>
                                             </div>
@@ -122,7 +122,7 @@ const ServiceDetail = ({ service }: { service: ServiceData }) => {
                                     <ul>
                                         {allServices.map(s => (
                                             <li key={s.id} className={s.id === service.id ? "current-item" : ""}>
-                                                <Link href={`/services/${s.id}`}>{s.title}</Link>
+                                                <Link href={`/${s.category}/${s.id}`}>{s.title}</Link>
                                             </li>
                                         ))}
                                     </ul>
@@ -137,7 +137,7 @@ const ServiceDetail = ({ service }: { service: ServiceData }) => {
                                     <p>
                                         Speak with an engineer or get a quote for your infrastructure needs.
                                     </p>
-                                    <h2><a href="tel:+919980123456">+91-9980-123-456</a></h2>
+                                    <h2><a href={`tel:${siteContent.brand.phone.replace(/\s+/g, '')}`}>{siteContent.brand.phone}</a></h2>
                                     <h4><a href="mailto:sales@navigatorsystem.com">sales@navigatorsystem.com</a></h4>
                                     <Link className="btn mt-30 circle btn-sm btn-gradient" href="/contact">Contact Us</Link>
                                 </div>

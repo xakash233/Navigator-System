@@ -2,9 +2,9 @@ export const siteContent = {
     brand: {
         name: "Navigator System",
         tagline: "Keep Your Infrastructure Running. Build What’s Next.",
-        phone: "",
-        email: "",
-        address: "",
+        phone: "+91 99862 88377",
+        email: "sales@navigatorsystem.com",
+        address: "No. 37/27, Meanee Avenue, Tank Road Cross, Opp Lakeside Hospital, Bangalore – 560042",
         logo: "/assets/img/navigator-systems-logo.svg",
         logoLight: "/assets/img/navigator-systems-logo.svg", // Assuming same logo for now, or use a specific light version if available
         logoIcon: "/assets/img/navigator-logo-only.svg"
@@ -16,7 +16,7 @@ export const siteContent = {
                 tagline: "IT Infrastructure Support",
                 title: "Reliable Support for Growing Businesses",
                 subtitle: "Maintain critical server, storage, and network infrastructure with maximum uptime.",
-                bgImage: "/assets/img/banner/7.jpg",
+                bgImage: "/assets/img/banner/reliable-support.png",
                 ctaPrimary: "Request a Quote",
                 ctaSecondary: "Talk to an Engineer"
             },
@@ -113,6 +113,13 @@ export const siteContent = {
             { name: "Nokia Siemens Networks", logo: "/assets/img/partners/nokia.svg" },
             { name: "CGI", logo: "/assets/img/partners/cgi.svg" },
             { name: "Mphasis", logo: "/assets/img/partners/mphasis.svg" }
+        ],
+        partners: [
+            { name: "IBM", logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" },
+            { name: "Oracle", logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg", status: "Gold Partner" },
+            { name: "Dell", logo: "https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg" },
+            { name: "Cisco", logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg" },
+            { name: "HP", logo: "https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" }
         ]
     },
     about: {
@@ -136,7 +143,8 @@ export const siteContent = {
             {
                 id: "server-maintenance-support",
                 category: "infrastructure",
-                icon: "icon-server.png",
+                icon: "1.png",
+                heroImage: "/assets/img/banner/server-maintenance.png",
                 title: "Server Maintenance & Support",
                 summary: "Cost-effective server maintenance and support designed to maximize uptime, reduce risk, and extend the lifecycle of your server assets — including multi-OEM environments and mixed x86/UNIX estates.",
                 features: [
@@ -161,7 +169,8 @@ export const siteContent = {
             {
                 id: "amc-services",
                 category: "infrastructure",
-                icon: "icon-contract.png",
+                icon: "2.png",
+                heroImage: "/assets/img/banner/2.jpg",
                 title: "AMC (Annual Maintenance Contract)",
                 summary: "Comprehensive IT hardware AMC for servers (including OS support as applicable), storage devices, and networking devices — designed for maximum uptime through quick breakdown resolution and preventive maintenance.",
                 features: [
@@ -169,12 +178,19 @@ export const siteContent = {
                     "Storage maintenance (SAN/NAS/Tape as applicable)",
                     "Networking equipment support",
                     "Spare parts coverage and replacements per contract"
-                ]
+                ],
+                keyBenefits: [
+                    "Predictable annual cost and planned maintenance",
+                    "Standardized reporting and service governance",
+                    "Higher availability and business continuity"
+                ],
+                ctaLine: "Request an AMC quote based on your asset list and locations."
             },
             {
                 id: "network-maintenance",
                 category: "infrastructure",
-                icon: "icon-network.png",
+                icon: "3.png",
+                heroImage: "/assets/img/banner/network-maintenance.png",
                 title: "Network Maintenance",
                 summary: "Network support services covering routing, switching, wireless, LAN, VPN security, and VOIP — ensuring stable connectivity and secure access across your offices and sites.",
                 features: [
@@ -183,12 +199,14 @@ export const siteContent = {
                     "LAN/VPN configuration and troubleshooting",
                     "Security hardening guidance and patch planning",
                     "Performance monitoring and incident management"
-                ]
+                ],
+                ctaLine: "Improve network uptime and reduce escalations — talk to our network team."
             },
             {
                 id: "data-center-solutions",
                 category: "infrastructure",
-                icon: "icon-datacenter.png",
+                icon: "4.png",
+                heroImage: "/assets/img/banner/hero-slide-4.jpg",
                 title: "Data Center Solutions",
                 summary: "Data center services to design, improve, and maintain facilities and systems — including capacity planning, maintenance governance, and operational best practices.",
                 features: [
@@ -196,23 +214,29 @@ export const siteContent = {
                     "Maintenance programs and vendor coordination",
                     "Monitoring and reporting setup",
                     "Security, access control, and operational process improvement"
-                ]
+                ],
+                ctaLine: "Request a data center assessment and improvement roadmap."
             },
             {
                 id: "it-operations-management",
                 category: "infrastructure",
-                icon: "icon-itom.png",
+                icon: "5.png",
+                heroImage: "/assets/img/banner/5.jpg",
                 title: "IT Operations Management (ITOM)",
                 summary: "Improve service delivery through structured IT operations management — service desk workflows, monitoring, automation, and reporting designed to reduce incidents and speed resolution.",
                 features: [
                     "Better incident response and reduced MTTR",
                     "Standard processes, SLAs, and reporting",
                     "Automation and AI-assisted recommendations (optional)"
-                ]
+                ],
+                ctaLine: "Let’s map your current ops flow and propose a measurable ITOM plan"
             },
             {
                 id: "helpdesk-fms",
+                category: "infrastructure",
+                icon: "6.png",
                 title: "Helpdesk / FMS Assistance",
+                heroImage: "/assets/img/banner/6.jpg",
                 summary: "24x7 helpdesk coverage and facilities management support to keep daily IT operations smooth — ideal for distributed sites and lean internal IT teams.",
                 features: [
                     "Ticketing, triage, escalation, and vendor coordination",
@@ -326,7 +350,7 @@ export const siteContent = {
                 id: "cloud-services",
                 category: "technology",
                 icon: "14.png",
-                heroImage: "/assets/img/banner/infra-service.jpg",
+                heroImage: "/assets/img/banner/hero-slide-2.jpg",
                 title: "Cloud Services",
                 summary: "Cloud strategy and implementation to improve reliability, scalability, and cost governance — including hybrid approaches where required.",
                 features: [

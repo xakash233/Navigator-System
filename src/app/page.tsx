@@ -9,6 +9,7 @@ import HowWeWorkV1 from "@/components/process/HowWeWork";
 import ClientsV1 from "@/components/clients/Clients";
 import CtaBannerV1 from "@/components/cta/CtaBanner";
 
+import Partners from "@/components/partners/Partners";
 
 export const metadata = {
     title: "Navigator System - IT Support & Engineering",
@@ -32,6 +33,8 @@ const HomePage = () => {
             <HowWeWorkV1 />
             {/* CTA Banner */}
             <CtaBannerV1 />
+            {/* Partners */}
+            <Partners />
             {/* Clients */}
             <ClientsV1 />
             <FooterV1 />
