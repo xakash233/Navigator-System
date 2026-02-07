@@ -3,12 +3,13 @@ import Link from 'next/link';
 interface DataType {
     title?: string;
     breadCrumb?: string;
+    bgImage?: string;
 }
 
-const BreadCrumb = ({ title, breadCrumb }: DataType) => {
+const BreadCrumb = ({ title, breadCrumb, bgImage }: DataType) => {
     return (
         <>
-            <div className="breadcrumb-area bg-cover shadow theme-hard text-center text-light" style={{ backgroundImage: 'url(/assets/img/banner/8.jpg)' }}>
+            <div className="breadcrumb-area bg-cover shadow theme-hard text-center text-light" style={{ backgroundImage: `url(${bgImage ? bgImage : "/assets/img/banner/8.jpg"})` }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2">
