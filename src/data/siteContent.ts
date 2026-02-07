@@ -145,7 +145,18 @@ export const siteContent = {
                     "Remote monitoring (optional): proactive alerts to prevent failures",
                     "Hardware replacement with compatible spares (as per contract scope)",
                     "Performance tuning support and incident root cause analysis"
-                ]
+                ],
+                whoIsItFor: [
+                    "Organizations with post-warranty servers",
+                    "Data centers seeking predictable annual maintenance",
+                    "Teams needing multi-brand support under one vendor"
+                ],
+                keyBenefits: [
+                    "Lower cost compared to OEM renewals",
+                    "Reduced downtime and faster restoration",
+                    "Clear SLA-driven response and escalation"
+                ],
+                ctaLine: "Get a Server Maintenance Plan and SLA proposal in 24-48 hours."
             },
             {
                 id: "amc-services",

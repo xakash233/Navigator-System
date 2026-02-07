@@ -4,23 +4,23 @@ const SocialShareV1 = () => {
     return (
         <>
             <li>
-                <Link href="https://www.facebook.com/" target='_blank'>
-                    <i className="fab fa-facebook-f" />
+                <Link href="https://www.facebook.com/profile.php?id=100068520871071" target='_blank'>
+                    <i className="fab fa-facebook-f" style={{ color: '#1351d8' }} />
                 </Link>
             </li>
             <li>
-                <Link href="https://www.x.com/" target='_blank'>
-                    <i className="fab fa-twitter" />
+                <Link href="https://x.com/navigatorsyste2" target='_blank'>
+                    <i className="fab fa-twitter" style={{ color: '#1351d8' }} />
                 </Link>
             </li>
             <li>
-                <Link href="https://www.youtube.com/" target='_blank'>
-                    <i className="fab fa-youtube" />
+                <Link href="https://www.youtube.com/channel/UCZvxa4YPExjmoDSuaZ1KeQg" target='_blank'>
+                    <i className="fab fa-youtube" style={{ color: '#1351d8' }} />
                 </Link>
             </li>
             <li>
-                <Link href="https://www.linkedin.com/" target='_blank'>
-                    <i className="fab fa-linkedin-in" />
+                <Link href="https://www.linkedin.com/company/nsplindia" target='_blank'>
+                    <i className="fab fa-linkedin-in" style={{ color: '#1351d8' }} />
                 </Link>
             </li>
         </>
