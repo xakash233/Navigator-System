@@ -3,11 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { siteContent } from "@/data/siteContent";
 
+
 interface ServiceData {
     id: string;
     title: string;
     summary: string;
     features: string[];
+    whoIsItFor?: string[];
+    keyBenefits?: string[];
+    ctaLine?: string;
     heroImage?: string;
     category?: string; // also good to have
 }
@@ -46,7 +50,7 @@ const ServiceDetail = ({ service }: { service: ServiceData }) => {
                                 <div className="row">
                                     <div className="col-lg-12">
                                         <div className="content">
-                                            <h3>What's Included</h3>
+                                            <h3>What&apos;s Included</h3>
                                             <ul className="feature-list-item">
                                                 {service.features.map((feature, index) => (
                                                     <li key={index}>{feature}</li>
@@ -54,6 +58,41 @@ const ServiceDetail = ({ service }: { service: ServiceData }) => {
                                             </ul>
                                         </div>
                                     </div>
+
+                                    {service.whoIsItFor && (
+                                        <div className="col-lg-12 mt-40">
+                                            <div className="content">
+                                                <h3>Who It&apos;s For</h3>
+                                                <ul className="feature-list-item">
+                                                    {service.whoIsItFor.map((item, index) => (
+                                                        <li key={index}>{item}</li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {service.keyBenefits && (
+                                        <div className="col-lg-12 mt-40">
+                                            <div className="content">
+                                                <h3>Key Benefits</h3>
+                                                <ul className="feature-list-item">
+                                                    {service.keyBenefits.map((item, index) => (
+                                                        <li key={index}>{item}</li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {service.ctaLine && (
+                                        <div className="col-lg-12 mt-40">
+                                            <div className="alert alert-info text-center">
+                                                <h4>{service.ctaLine}</h4>
+                                                <Link className="btn mt-20 circle btn-sm btn-gradient" href="/contact">Get a Proposal</Link>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
 
