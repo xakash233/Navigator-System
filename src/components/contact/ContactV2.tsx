@@ -12,7 +12,7 @@ const ContactV2 = () => {
                     <div className="row">
                         <div className="contact-stye-one col-lg-5 mb-md-50 mb-xs-20">
                             <div className="contact-style-one-info">
-                                <h2 className="split-text" data-aos="fade-up">Let’s discuss your uptime goals or project build.</h2>
+                                <h2 className="split-text" data-aos="fade-up">Let&rsquo;s discuss your uptime goals or project build.</h2>
                                 <p data-aos="fade-up" data-aos-delay="100">
                                     Whether you need to maintain critical infrastructure or build modern digital solutions, we are here to help.
                                 </p>
@@ -22,7 +22,7 @@ const ContactV2 = () => {
                                             <i className="fas fa-server" />
                                         </div>
                                         <div className="content">
-                                            <h5 className="title">Support & Maintenance</h5>
+                                            <h5 className="title">Support &amp; Maintenance</h5>
                                             <p>Request AMC / Server / Network support</p>
                                         </div>
                                     </li>

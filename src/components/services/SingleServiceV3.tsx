@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { siteContent } from "@/data/siteContent";
+
 
 interface ServiceType {
     id: string;
