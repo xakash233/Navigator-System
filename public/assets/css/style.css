@@ -5063,9 +5063,8 @@ a.btn-circle.circle-border:hover i {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	position: absolute;
+	position: relative;
 	width: 100%;
-	bottom: 0;
 }
 
 .company-autor .right-info img {
@@ -14719,26 +14718,26 @@ footer.footer-style-two .f-item.about::after {
 }
 
 
-.banner-area .swiper-button-prev svg, 
+.banner-area .swiper-button-prev svg,
 .banner-area .swiper-button-next svg {
-    display: none;
+	display: none;
 }
 
 .swiper-nav-left div svg {
-    display: none;
+	display: none;
 }
 
 .process-style-two .icon img {
-    width: 60px;
+	width: 60px;
 }
 
 .process-style-three img {
-    width: 60px;
+	width: 60px;
 }
 
 .about-style-one .about-thumb img,
 .skill-fact-thumb img,
- .expertise-style-one-thumb img,
+.expertise-style-one-thumb img,
 .about-style-five-left-info img,
 .choose-us-four-thumb img,
 .about-style-four-thumb img,
@@ -14755,45 +14754,44 @@ footer.footer-style-two .f-item.about::after {
 .blog-style-three .thumb img,
 .blog-style-four .thumb img,
 .blog-area.full-blog .thumb img,
-.banner-style-two .container .banner-thumb img
-.services-style-two .thumb img,
+.banner-style-two .container .banner-thumb img .services-style-two .thumb img,
 .services-details-area .thumb img,
 .about-style-two-thumb img,
 .thumb-style-two img,
 .gallery-style-one>img,
 .feature-style-two .thumb img,
 .thumb-style-one img {
-    width: 100%;
+	width: 100%;
 }
 
 .about-style-two-thumb .certification img,
 .thumb-style-two .icon img {
-    width: auto;
+	width: auto;
 }
 
 .blog-area.full-blog .post-author img {
-    width: 150px;
+	width: 150px;
 }
 
 .customScrollUp {
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
-    width: 40px;
-    height: 40px;
-    background: var(--color-primary);
-    color: #fff;
-    font-size: 16px;
-    text-align: center;
-    line-height: 40px;
-    padding: 0;
-    border: none;
-    z-index: 999;
-    border-radius: 50%;
-    z-index: 3333;
+	position: fixed;
+	right: 25px;
+	bottom: 25px;
+	width: 40px;
+	height: 40px;
+	background: var(--color-primary);
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	line-height: 40px;
+	padding: 0;
+	border: none;
+	z-index: 999;
+	border-radius: 50%;
+	z-index: 3333;
 }
 
 .customScrollUp i {
-    color: #fff;
-    position: relative;
+	color: #fff;
+	position: relative;
 }

@@ -19,9 +19,15 @@ const CounterForm = () => {
         <>
             <form className="contact-form contact-form" onSubmit={handleForm}>
                 <div className="row">
-                    <div className="col-lg-12">
+                    <div className="col-lg-6">
                         <div className="form-group">
-                            <input className="form-control" id="name" name="name" placeholder="Name" type="text" required autoComplete="off"/>
+                            <input className="form-control" id="name" name="name" placeholder="Name" type="text" required autoComplete="off" />
+                            <span className="alert-error" />
+                        </div>
+                    </div>
+                    <div className="col-lg-6">
+                        <div className="form-group">
+                            <input className="form-control" id="company" name="company" placeholder="Company" type="text" required autoComplete="off" />
                             <span className="alert-error" />
                         </div>
                     </div>
@@ -41,9 +47,30 @@ const CounterForm = () => {
                     </div>
                 </div>
                 <div className="row">
+                    <div className="col-lg-6">
+                        <div className="form-group">
+                            <input className="form-control" id="city" name="city" placeholder="City" type="text" required autoComplete="off" />
+                            <span className="alert-error" />
+                        </div>
+                    </div>
+                    <div className="col-lg-6">
+                        <div className="form-group">
+                            <select className="form-control" id="service" name="service" required>
+                                <option value="">Service Needed*</option>
+                                <option value="amc">AMC / Infrastructure Support</option>
+                                <option value="engineering">Software / Web Engineering</option>
+                                <option value="cloud">Cloud Services</option>
+                                <option value="partnership">Partnership / Vendor</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span className="alert-error" />
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
                     <div className="col-lg-12">
                         <div className="form-group comments">
-                            <textarea className="form-control" id="comments" name="comments" placeholder="Tell Us About Project *" required autoComplete="off" />
+                            <textarea className="form-control" id="comments" name="comments" placeholder="Message *" required autoComplete="off" />
                         </div>
                     </div>
                 </div>
@@ -54,9 +81,15 @@ const CounterForm = () => {
                         </button>
                     </div>
                 </div>
-                
+
                 <div className="col-lg-12 alert-notification">
                     <div id="message" className="alert-msg" />
+                </div>
+
+                <div className="col-lg-12 mt-3">
+                    <p className="small text-muted">
+                        By submitting this form, you agree to our Terms and Privacy Policy.
+                    </p>
                 </div>
             </form>
         </>

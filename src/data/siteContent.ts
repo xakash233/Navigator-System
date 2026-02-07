@@ -73,6 +73,12 @@ export const siteContent = {
             { title: "Transparency", description: "Transparent SLAs and measurable service outcomes" },
             { title: "Security", description: "Security-first practices and controlled access" },
             { title: "Modernization", description: "Practical modernization — optimize, extend lifecycle, and migrate when needed" }
+        ],
+        differentiators: [
+            "Preventive maintenance + remote monitoring to catch issues early",
+            "Multi-OEM expertise across Dell, HP, IBM, Cisco, and more",
+            "Pan-India service capability with structured escalation",
+            "A single partner for ongoing maintenance plus new engineering delivery"
         ]
     },
     services: {
