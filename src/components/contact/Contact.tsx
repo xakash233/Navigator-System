@@ -12,38 +12,36 @@ const ContactV2 = () => {
                     <div className="row">
                         <div className="contact-stye-one col-lg-5 mb-md-50 mb-xs-20">
                             <div className="contact-style-one-info">
-                                <h2 className="split-text" data-aos="fade-up">Contact Information</h2>
+                                <h2 className="split-text" data-aos="fade-up">Let&rsquo;s discuss your uptime goals or project build.</h2>
                                 <p data-aos="fade-up" data-aos-delay="100">
-                                    Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing.
+                                    Whether you need to maintain critical infrastructure or build modern digital solutions, we are here to help.
                                 </p>
                                 <ul>
                                     <li data-aos="fade-up">
                                         <div className="icon">
-                                            <i className="fas fa-phone-alt" />
+                                            <i className="fas fa-server" />
                                         </div>
                                         <div className="content">
-                                            <h5 className="title">Hotline</h5>
-                                            <a href="tel:+4733378901">+4733378901</a>
+                                            <h5 className="title">Support &amp; Maintenance</h5>
+                                            <p>Request AMC / Server / Network support</p>
                                         </div>
                                     </li>
                                     <li data-aos="fade-up" data-aos-delay="300">
                                         <div className="icon">
-                                            <i className="fas fa-map-marker-alt" />
+                                            <i className="fas fa-code" />
                                         </div>
                                         <div className="info">
-                                            <h5 className="title">Our Location</h5>
-                                            <p>
-                                                55 Main Street, The Grand Avenue 2nd Block, <br /> New York City
-                                            </p>
+                                            <h5 className="title">Engineering Delivery</h5>
+                                            <p>Website, apps, cloud, automation</p>
                                         </div>
                                     </li>
                                     <li data-aos="fade-up" data-aos-delay="500">
                                         <div className="icon">
-                                            <i className="fas fa-envelope-open-text" />
+                                            <i className="fas fa-handshake" />
                                         </div>
                                         <div className="info">
-                                            <h5 className="title">Official Email</h5>
-                                            <a href="mailto:info@agrul.com.com">info@agrul.com</a>
+                                            <h5 className="title">Partnerships</h5>
+                                            <p>Vendor and integration opportunities</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -52,7 +50,7 @@ const ContactV2 = () => {
                         <div className="contact-stye-one col-lg-7 pl-60 pl-md-15 pl-xs-15">
                             <div className="contact-form-style-one">
                                 <h5 className="sub-title">Have Questions?</h5>
-                                <h2 className="title">Send us a Massage</h2>
+                                <h2 className="title">Send us a Message</h2>
                                 <CounterForm />
                             </div>
                         </div>

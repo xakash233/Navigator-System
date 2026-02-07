@@ -12,7 +12,7 @@ const ContactPage = () => {
     return (
         <>
             <LayoutV1>
-                <BreadCrumb title="Contact Us" breadCrumb="Contact" />
+                <BreadCrumb title="Contact Us" breadCrumb="Contact" bgImage="/assets/img/banner/contact-us.png" />
                 <ContactV2 />
                 <Map />
             </LayoutV1>

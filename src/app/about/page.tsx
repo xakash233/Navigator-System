@@ -11,7 +11,7 @@ const AboutUsPage = () => {
     return (
         <>
             <LayoutV1>
-                <BreadCrumb title="About Us" breadCrumb="About" />
+                <BreadCrumb title="About Us" breadCrumb="About" bgImage="/assets/img/banner/about-us.png" />
                 <AboutV3 />
                 {/* Team Section - optional, keeping as per structure suggestion */}
                 <TeamV2 hasTitle={true} />
