@@ -59,12 +59,12 @@ export const siteContent = {
             subtitle: "Overview",
             items: [
                 {
-                    icon: "flaticon-server",
+                    icon: "icon-server.png",
                     title: "Infrastructure Support",
                     description: "Server maintenance, AMC, network maintenance, data center support, helpdesk/FMS, and IT operations management."
                 },
                 {
-                    icon: "flaticon-cloud-computing",
+                    icon: "icon-7.png",
                     title: "Technology Delivery",
                     description: "Website & app development, UI/UX, branding, e-commerce, software engineering, cloud services, and AI automation."
                 }
@@ -115,11 +115,11 @@ export const siteContent = {
             { name: "Mphasis", logo: "/assets/img/partners/mphasis.svg" }
         ],
         partners: [
-            { name: "IBM", logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" },
-            { name: "Oracle", logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg", status: "Gold Partner" },
-            { name: "Dell", logo: "https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg" },
-            { name: "Cisco", logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg" },
-            { name: "HP", logo: "https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" }
+            { name: "IBM", logo: "/assets/img/partners/ibm.svg" },
+            { name: "Oracle", logo: "/assets/img/partners/oracle.png", status: "Gold Partner" },
+            { name: "Dell", logo: "/assets/img/partners/dell.svg" },
+            { name: "Cisco", logo: "/assets/img/partners/cisco.svg" },
+            { name: "HP", logo: "/assets/img/partners/hp.svg" }
         ]
     },
     about: {

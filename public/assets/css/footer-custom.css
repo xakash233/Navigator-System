@@ -1,0 +1,87 @@
+/* Footer Custom Overrides */
+
+/* Remove any unwanted background color on hover for footer links */
+footer a:hover,
+.footer-item a:hover,
+.f-item a:hover,
+.footer-item ul li a:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #007bff !important;
+    /* Set text color to primary blue on hover */
+    text-decoration: none !important;
+    padding-left: 5px;
+    /* Add a slight shift for effect if desired, or remove */
+    transition: all 0.3s ease;
+}
+
+/* Ensure no block background on list items either */
+.footer-item ul li:hover {
+    background: transparent !important;
+}
+
+/* Newsletter Container */
+.f-item.newsletter form {
+    position: relative;
+    /* Remove any border on the form itself if present, we style the input */
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+/* Newsletter Input Styling - Perfect Blue Box */
+.f-item.newsletter input.form-control {
+    border: 2px solid #007bff !important;
+    /* Solid Brand Blue Border */
+    background-color: #ffffff !important;
+    /* Solid White Background */
+    border-radius: 4px !important;
+    /* Slight rounding for clean box look */
+    padding: 12px 15px;
+    /* Comfortable padding */
+    padding-right: 50px;
+    /* Space for the button */
+    width: 100%;
+    color: #333;
+    font-size: 15px;
+    height: 52px;
+    /* Fixed height for consistency */
+    box-shadow: none !important;
+    /* Remove default shadows */
+    outline: none !important;
+    /* Remove default outline */
+}
+
+/* Focus State */
+.f-item.newsletter input.form-control:focus {
+    border-color: #0056b3 !important;
+    /* Darker blue on focus */
+}
+
+/* Submit Button Positioning */
+.f-item.newsletter button {
+    position: absolute;
+    right: 15px;
+    /* Properly specific padding from right */
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+/* SVG Icon Color inside button */
+.f-item.newsletter button svg path {
+    stroke: #007bff;
+    /* Make the arrow blue too */
+    stroke-width: 2;
+}
+
+.f-item.newsletter button:hover svg path {
+    stroke: #0056b3;
+}

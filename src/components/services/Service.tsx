@@ -68,25 +68,25 @@ const ServiceV3 = () => {
                                         slidesPerView: 3,
                                     },
                                     1367: {
-                                        slidesPerView: 3.6,
+                                        slidesPerView: 3,
                                     },
                                 }}
                                 modules={[Pagination, Navigation, Keyboard, Autoplay]}
                             >
                                 {featuredServices.map(service =>
-                                    <SwiperSlide key={service.id} style={{ height: 'auto' }}>
+                                    <SwiperSlide key={service.id} className="h-auto">
                                         <SingleServiceV3 service={service} />
                                     </SwiperSlide>
                                 )}
 
-                                <div className="services-swiper-nav">
-                                    {/* Pagination */}
-                                    <div className="services-pagination" />
-                                    <div className="services-button-prev" />
-                                    <div className="services-button-next" />
-                                </div>
-
                             </Swiper>
+
+                            <div className="services-swiper-nav">
+                                {/* Pagination */}
+                                <div className="services-pagination" />
+                                <div className="services-button-prev"></div>
+                                <div className="services-button-next"></div>
+                            </div>
                         </div>
                     </div>
                 </div>

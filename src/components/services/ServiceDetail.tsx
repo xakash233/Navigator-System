@@ -28,7 +28,7 @@ const ServiceDetail = ({ service }: { service: ServiceData }) => {
                 <div className="services-details-items">
                     <div className="row">
                         <div className="col-xl-8 col-lg-7 order-lg-last pl-50 pl-md-15 pl-xs-15">
-                            <div className="thumb">
+                            <div className="thumb" style={{ position: 'relative', height: '450px', width: '100%', overflow: 'hidden', borderRadius: '10px', marginBottom: '30px' }}>
 
                                 {(() => {
                                     // Use dynamic image if available, otherwise fallback
@@ -37,7 +37,13 @@ const ServiceDetail = ({ service }: { service: ServiceData }) => {
                                             ? "/assets/img/banner/infra-service.jpg"
                                             : "/assets/img/banner/tech-service.jpg");
                                     return (
-                                        <Image src={imagePath} alt={service.title} width={2000} height={1045} priority />
+                                        <Image
+                                            src={imagePath}
+                                            alt={service.title}
+                                            fill
+                                            style={{ objectFit: 'cover' }}
+                                            priority
+                                        />
                                     );
                                 })()}
                             </div>
@@ -48,10 +54,10 @@ const ServiceDetail = ({ service }: { service: ServiceData }) => {
 
                             <div className="features mt-40 mt-xs-30 mb-30 mb-xs-20">
                                 <div className="row">
-                                    <div className="col-lg-12">
+                                    <div className="col-lg-12" data-aos="fade-up" data-aos-delay="100">
                                         <div className="content">
                                             <h3>What&apos;s Included</h3>
-                                            <ul className="feature-list-item">
+                                            <ul className="feature-list-modern">
                                                 {service.features.map((feature, index) => (
                                                     <li key={index}>{feature}</li>
                                                 ))}
@@ -60,10 +66,10 @@ const ServiceDetail = ({ service }: { service: ServiceData }) => {
                                     </div>
 
                                     {service.whoIsItFor && (
-                                        <div className="col-lg-12 mt-40">
+                                        <div className="col-lg-12 mt-40" data-aos="fade-up" data-aos-delay="200">
                                             <div className="content">
                                                 <h3>Who It&apos;s For</h3>
-                                                <ul className="feature-list-item">
+                                                <ul className="audience-list">
                                                     {service.whoIsItFor.map((item, index) => (
                                                         <li key={index}>{item}</li>
                                                     ))}
@@ -73,10 +79,10 @@ const ServiceDetail = ({ service }: { service: ServiceData }) => {
                                     )}
 
                                     {service.keyBenefits && (
-                                        <div className="col-lg-12 mt-40">
+                                        <div className="col-lg-12 mt-40" data-aos="fade-up" data-aos-delay="300">
                                             <div className="content">
                                                 <h3>Key Benefits</h3>
-                                                <ul className="feature-list-item">
+                                                <ul className="benefits-list">
                                                     {service.keyBenefits.map((item, index) => (
                                                         <li key={index}>{item}</li>
                                                     ))}
