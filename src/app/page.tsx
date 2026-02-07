@@ -1,4 +1,4 @@
-import About from "@/components/about/About";
+import AboutV3 from "@/components/about/AboutV3";
 import BannerV3 from "@/components/banner/Banner";
 import FeatureV2 from "@/components/feature/Feature";
 import FooterV1 from "@/components/footer/Footer";
@@ -23,7 +23,7 @@ const HomePage = () => {
             {/* What We Do */}
             <FeatureV2 />
             {/* Why Navigator System */}
-            <About />
+            <AboutV3 />
             {/* Industries */}
             <IndustriesV1 />
             {/* Featured Services */}
