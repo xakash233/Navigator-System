@@ -8,6 +8,8 @@ interface ServiceData {
     title: string;
     summary: string;
     features: string[];
+    heroImage?: string;
+    category?: string; // also good to have
 }
 
 const ServiceDetail = ({ service }: { service: ServiceData }) => {
@@ -25,8 +27,11 @@ const ServiceDetail = ({ service }: { service: ServiceData }) => {
                             <div className="thumb">
 
                                 {(() => {
-                                    const isInfrastructure = siteContent.services.infrastructure.some(s => s.id === service.id);
-                                    const imagePath = isInfrastructure ? "/assets/img/banner/infra-service.jpg" : "/assets/img/banner/tech-service.jpg";
+                                    // Use dynamic image if available, otherwise fallback
+                                    const imagePath = service.heroImage ||
+                                        (siteContent.services.infrastructure.some(s => s.id === service.id)
+                                            ? "/assets/img/banner/infra-service.jpg"
+                                            : "/assets/img/banner/tech-service.jpg");
                                     return (
                                         <Image src={imagePath} alt={service.title} width={2000} height={1045} priority />
                                     );
@@ -41,7 +46,7 @@ const ServiceDetail = ({ service }: { service: ServiceData }) => {
                                 <div className="row">
                                     <div className="col-lg-12">
                                         <div className="content">
-                                            <h3>What's Included</h3>
+                                            <h3>What&apos;s Included</h3>
                                             <ul className="feature-list-item">
                                                 {service.features.map((feature, index) => (
                                                     <li key={index}>{feature}</li>
