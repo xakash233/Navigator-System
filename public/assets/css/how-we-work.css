@@ -1,0 +1,126 @@
+/* Process Area Styles */
+.process-area {
+    position: relative;
+    overflow: hidden;
+    background: #fdfdfd;
+}
+
+/* Connecting Line (Desktop) */
+.process-connection-line {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: repeating-linear-gradient(to right, #e0e0e0 0, #e0e0e0 10px, transparent 10px, transparent 20px);
+    z-index: 0;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 991px) {
+    .process-connection-line {
+        display: none;
+    }
+}
+
+/* Process Card */
+.process-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    border-top: 4px solid transparent;
+    height: 100%;
+}
+
+.process-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-top-color: #007bff;
+    /* Brand Color */
+}
+
+/* Step Number Badge */
+.process-step-badge {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.process-card:hover .process-step-badge {
+    opacity: 1;
+    top: -25px;
+}
+
+/* Icon Container */
+.process-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: #f4f9ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #007bff;
+    font-size: 32px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.process-card:hover .process-icon {
+    background: #007bff;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);
+}
+
+/* Typography */
+.process-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1a202c;
+}
+
+.process-card p {
+    color: #718096;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Number behind text (Background effect) */
+.process-bg-num {
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+    font-size: 80px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.03);
+    line-height: 1;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.process-card:hover .process-bg-num {
+    color: rgba(0, 123, 255, 0.08);
+    transform: scale(1.1);
+}

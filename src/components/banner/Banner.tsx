@@ -96,11 +96,11 @@ const BannerV3 = () => {
             </div>
 
             {/* Trust/Proof Bar Section - Placing it right below Hero */}
-            <div className="features-area default-padding-bottom bottom-less bg-gray">
+            <div className="features-area default-padding-bottom bottom-less bg-gray" style={{ paddingBottom: '30px' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <div className="feature-style-two-items" style={{ marginTop: '-80px', position: 'relative', zIndex: 10, background: 'white', padding: '40px', borderRadius: '10px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
+                            <div className="feature-style-two-items" style={{ marginTop: '-30px', position: 'relative', zIndex: 10, background: 'white', padding: '40px', borderRadius: '10px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
                                 <div className="row">
                                     <div className="col-lg-3 col-md-6 feature-item" data-aos="fade-up">
                                         <div className="info" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>

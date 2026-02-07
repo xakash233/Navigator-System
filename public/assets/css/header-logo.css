@@ -1,0 +1,44 @@
+/* Header Logo Enhancement */
+
+/* Main Logo Sizing */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.navbar-brand img.logo {
+    height: 60px !important;
+    /* Increased from default ~45px */
+    width: auto !important;
+    max-width: none !important;
+    object-fit: contain;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
+    /* Subtle shadow for depth */
+}
+
+/* Logo hover effect - refined */
+.navbar-brand:hover img.logo {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Scrolled/Sticky State - Keep it visible but slightly smaller */
+nav.navbar.validnavs.sticked .navbar-brand img.logo-scrolled {
+    height: 50px !important;
+}
+
+/* Mobile Logo */
+@media (max-width: 991px) {
+    .navbar-brand img.logo {
+        height: 50px !important;
+    }
+}
+
+/* Ensure proper spacing around logo */
+.navbar-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}

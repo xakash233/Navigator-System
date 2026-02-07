@@ -15,6 +15,16 @@ import '@/assets/css/helper.css';
 import '@/assets/css/unit-test.css';
 import '@/assets/css/validnavs.css';
 import '@/assets/css/style.css'
+import '@/assets/css/partner-scroll.css';
+import '@/assets/css/service-scroll.css';
+import '@/assets/css/industries.css';
+import '@/assets/css/how-we-work.css';
+import '@/assets/css/what-we-do.css';
+import '@/assets/css/footer-custom.css';
+import '@/assets/css/sidebar-custom.css';
+import '@/assets/css/service-details-enhanced.css';
+import '@/assets/css/header-hover.css';
+import '@/assets/css/header-logo.css';
 
 import type { Metadata } from "next";
 import Dependency from '@/components/utilities/Dependency';

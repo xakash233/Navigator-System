@@ -1,0 +1,76 @@
+/* Navigation Container - Centered at Bottom */
+.services-swiper-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* Space between buttons */
+    margin-top: 50px;
+    /* Space from the cards */
+    width: 100%;
+}
+
+/* Navigation Buttons Styles */
+/* Navigation Buttons Styles */
+.services-swiper-nav .services-button-prev,
+.services-swiper-nav .services-button-next {
+    position: static;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    outline: none;
+}
+
+/* Remove default Swiper arrows if they appear */
+.services-button-prev::after,
+.services-button-next::after {
+    content: none !important;
+    display: none;
+}
+
+/* Hover Effects */
+.services-swiper-nav .services-button-prev:hover,
+.services-swiper-nav .services-button-next:hover {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Reset Carousel Padding */
+.services-carousel {
+    position: relative;
+    padding: 0 15px;
+}
+
+/* Explicitly add FontAwesome icons */
+.services-button-prev::before {
+    content: "\f053";
+    /* fa-chevron-left */
+    font-family: "Font Awesome 5 Pro", "FontAwesome";
+    font-weight: 900;
+}
+
+.services-button-next::before {
+    content: "\f054";
+    /* fa-chevron-right */
+    font-family: "Font Awesome 5 Pro", "FontAwesome";
+    font-weight: 900;
+}
+
+/* Hide Pagination for cleaner look (focus on arrows) */
+.services-pagination {
+    display: none;
+}

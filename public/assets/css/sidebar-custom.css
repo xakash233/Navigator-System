@@ -1,0 +1,42 @@
+/* Sidebar Custom Overrides */
+
+/* Fix Close Button Visibility and Alignment */
+.side .close-side {
+    position: absolute !important;
+    /* Take out of flow for precise positioning */
+    top: 38px !important;
+    /* Aligns vertically with the center of the 50px high logo (30px padding + 25px) */
+    right: 50px !important;
+    /* Aligns with the 50px padding of the sidebar */
+    float: none !important;
+    /* Disable float */
+
+    color: #1a202c !important;
+    /* Dark Text */
+    border: 2px solid #e2e8f0 !important;
+    /* Light Grey Border */
+    width: 35px;
+    height: 35px;
+    line-height: 31px;
+    /* Vertically center the icon in the button */
+
+    border-radius: 50%;
+    text-align: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.side .close-side:hover {
+    color: #fff !important;
+    /* White text on active */
+    background-color: #007bff !important;
+    /* Brand Blue Background */
+    border-color: #007bff !important;
+    transform: rotate(90deg);
+}
+
+/* Ensure the icon is centered */
+.side .close-side i {
+    line-height: 31px;
+    display: inline-block;
+}

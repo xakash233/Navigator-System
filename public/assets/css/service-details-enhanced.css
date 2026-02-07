@@ -1,0 +1,210 @@
+/* Service Details Enhanced Styling */
+
+/* General Typography */
+.services-details-area h2 {
+    font-weight: 800;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.services-details-area h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1a202c;
+    position: relative;
+    padding-left: 15px;
+    border-left: 4px solid #007bff;
+}
+
+/* Feature List as Modern Cards */
+.feature-list-modern {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Responsive grid */
+    gap: 20px;
+}
+
+.feature-list-modern li {
+    background: #ffffff;
+    border: 1px solid #eef2f6;
+    border-radius: 12px;
+    padding: 20px 25px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    display: flex;
+    align-items: flex-start;
+}
+
+.feature-list-modern li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 123, 255, 0.1);
+    border-color: rgba(0, 123, 255, 0.3);
+}
+
+.feature-list-modern li::before {
+    content: "\f00c";
+    /* FontAwesome Check */
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    color: #007bff;
+    font-size: 18px;
+    margin-right: 15px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* Specific Section Styles */
+
+/* Who It's For - Audience Cards */
+.audience-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.audience-list li {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 5px solid #3182CE;
+    font-weight: 500;
+    color: #2d3748;
+    transition: 0.3s;
+}
+
+.audience-list li:hover {
+    background: #ebf8ff;
+    padding-left: 25px;
+}
+
+.audience-list li::before {
+    content: "\f007";
+    /* User icon */
+    font-family: "Font Awesome 5 Pro";
+    margin-right: 12px;
+    color: #3182CE;
+}
+
+/* Key Benefits - Highlight Cards */
+.benefits-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.benefits-list li {
+    background: linear-gradient(to right, #ffffff, #f7fafc);
+    padding: 18px 25px;
+    border-radius: 50px;
+    /* Pill shape */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid #edf2f7;
+    position: relative;
+    padding-left: 50px;
+    transition: 0.3s;
+}
+
+.benefits-list li:hover {
+    box-shadow: 0 5px 15px rgba(49, 130, 206, 0.15);
+    transform: translateX(5px);
+}
+
+.benefits-list li::before {
+    content: "\f005";
+    /* Star icon */
+    font-family: "Font Awesome 5 Pro";
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ECC94B;
+    /* Star Color */
+    font-weight: 900;
+}
+
+/* Animated Intro Text */
+.services-details-area .lead {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4a5568;
+    border-left: 4px solid #e2e8f0;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+/* Other Services Mini Cards */
+.services-more .item {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    height: 100%;
+}
+
+.services-more .item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: #007bff;
+    transform: translateY(-3px);
+}
+
+.services-more .item h4 a {
+    color: #1a202c;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.services-more .item:hover h4 a {
+    color: #007bff;
+}
+
+/* Service Detail Sidebar Widget Enhancement */
+.services-sidebar .single-widget {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    margin-bottom: 30px;
+}
+
+.services-sidebar .widget-title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #edf2f7;
+}
+
+.services-sidebar .services-list-widget ul li {
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.services-sidebar .services-list-widget ul li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.services-sidebar .services-list-widget ul li a {
+    color: #4a5568;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+.services-sidebar .services-list-widget ul li.current-item a,
+.services-sidebar .services-list-widget ul li a:hover {
+    color: #3182CE;
+    padding-left: 5px;
+}

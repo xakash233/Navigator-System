@@ -1,0 +1,141 @@
+/* Header Hover Effects - Comprehensive */
+
+/* =========================================
+   Top Level Menu Items 
+   ========================================= */
+
+/* Initial State */
+nav.navbar.validnavs ul.nav>li>a {
+    position: relative;
+    transition: color 0.3s ease;
+    font-weight: 600;
+    /* Ensure bold */
+}
+
+/* Underline Animation */
+nav.navbar.validnavs ul.nav>li>a::before {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    /* Adjusted for better alignment */
+    left: 0;
+    width: 0;
+    height: 3px;
+    /* Slightly thicker */
+    background-color: #007bff;
+    /* Explicit Blue */
+    transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    opacity: 0;
+}
+
+/* Hover & Active State (Keep active when dropdown is open) */
+nav.navbar.validnavs ul.nav>li:hover>a,
+nav.navbar.validnavs ul.nav>li.dropdown.on>a,
+nav.navbar.validnavs ul.nav>li.active>a {
+    color: #007bff !important;
+}
+
+nav.navbar.validnavs ul.nav>li:hover>a::before,
+nav.navbar.validnavs ul.nav>li.dropdown.on>a::before,
+nav.navbar.validnavs ul.nav>li.active>a::before {
+    width: 100%;
+    opacity: 1;
+}
+
+/* Chevron/Icon Rotation */
+nav.navbar.validnavs ul.nav>li.dropdown>a .fa-chevron-down,
+nav.navbar.validnavs ul.nav>li.dropdown>a::after {
+    transition: transform 0.3s ease;
+}
+
+nav.navbar.validnavs ul.nav>li.dropdown:hover>a .fa-chevron-down,
+nav.navbar.validnavs ul.nav>li.dropdown:hover>a::after {
+    transform: rotate(180deg);
+    color: #007bff;
+}
+
+/* =========================================
+   Dropdown Menu Items 
+   ========================================= */
+
+/* Dropdown Container Animation */
+nav.navbar.validnavs ul.nav>li.dropdown ul.dropdown-menu {
+    border-top: 3px solid #007bff;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 0 0 8px 8px;
+    padding: 15px 0;
+}
+
+/* Show Dropdown on Hover */
+nav.navbar.validnavs ul.nav>li.dropdown:hover>ul.dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Dropdown Link Style */
+nav.navbar.validnavs ul.nav>li.dropdown ul.dropdown-menu li a {
+    position: relative;
+    padding: 12px 25px;
+    font-size: 15px;
+    color: #4a5568 !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+/* Dropdown Link Hover */
+nav.navbar.validnavs ul.nav>li.dropdown ul.dropdown-menu li a:hover {
+    color: #007bff !important;
+    background-color: #f7fafc;
+    /* Subtle background */
+    padding-left: 30px;
+    /* Slide effect */
+    border-left-color: #007bff;
+    /* Blue accent on left */
+}
+
+/* =========================================
+   Utility Icons (Search, Sidebar, Cart)
+   ========================================= */
+
+.attr-nav ul li a {
+    transition: color 0.3s ease;
+}
+
+.attr-nav ul li a:hover {
+    color: #007bff !important;
+}
+
+.attr-nav ul li a:hover i {
+    color: #007bff !important;
+    transform: scale(1.1);
+}
+
+/* Search Icon Specific */
+.attr-nav ul li.search>a i {
+    transition: all 0.3s ease;
+}
+
+/* Sidebar Toggle Specific */
+.attr-nav .side-menu span {
+    transition: background-color 0.3s ease;
+}
+
+.attr-nav .side-menu:hover span {
+    background-color: #007bff !important;
+}
+
+/* Logo Hover */
+.navbar-brand img {
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}

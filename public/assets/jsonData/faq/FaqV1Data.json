@@ -2,25 +2,50 @@
     {
         "id": "headingOne",
         "target": "collapseOne",
-        "question": "Where can I get analytics help?",
-        "answer": "Bennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out."
+        "category": "infrastructure",
+        "question": "Do you support post-warranty servers?",
+        "answer": "Yes, we specialize in cost-effective support for post-warranty environments across major OEMs including Dell, HP, IBM, Cisco, and more. Our multi-OEM expertise allows us to provide comprehensive maintenance regardless of your hardware mix."
     },
     {
         "id": "headingTwo",
         "target": "collapseTwo",
-        "question": "How much does data analytics costs?",
-        "answer": "Cennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out."
+        "category": "infrastructure",
+        "question": "Do you provide OEM parts?",
+        "answer": "As per contract terms, we provide compatible spares with clear replacement policies. Our approach ensures you get reliable parts at competitive prices while maintaining transparency about what's covered under your specific service agreement."
     },
     {
         "id": "headingThree",
         "target": "collapseThree",
-        "question": "What kind of data is needed for analysis?",
-        "answer": "Tennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out."
+        "category": "infrastructure",
+        "question": "What SLAs do you offer?",
+        "answer": "SLA options depend on location and contract tier. We offer flexible response time commitments, resolution goals, and structured escalation paths tailored to your business criticality and geographic distribution."
     },
     {
         "id": "headingFour",
         "target": "collapseFour",
-        "question": "How do I pay for your service?",
-        "answer": "Sennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out."
+        "category": "infrastructure",
+        "question": "Do you support x86 and UNIX environments?",
+        "answer": "Yes, multi-platform expertise is available based on scope. Our team has extensive experience with both x86 and UNIX-based systems, ensuring comprehensive support regardless of your infrastructure architecture."
+    },
+    {
+        "id": "headingFive",
+        "target": "collapseFive",
+        "category": "technology",
+        "question": "How long does a website revamp take?",
+        "answer": "Typical website revamps take 3-8 weeks depending on the number of pages, integrations required, and approval cycles. We provide a detailed timeline during the planning phase based on your specific requirements."
+    },
+    {
+        "id": "headingSix",
+        "target": "collapseSix",
+        "category": "technology",
+        "question": "Will you provide content and design?",
+        "answer": "Yes, we can deliver end-to-end services including content strategy and creation, UI/UX design, development, and deployment. We work as a complete partner or complement your existing team based on your needs."
+    },
+    {
+        "id": "headingSeven",
+        "target": "collapseSeven",
+        "category": "technology",
+        "question": "Do you support ongoing maintenance?",
+        "answer": "Yes, we offer ongoing maintenance via monthly or annual plans covering updates, security patches, performance optimization, and technical support to ensure your digital assets remain secure and performant."
     }
 ]
