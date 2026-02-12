@@ -1,24 +1,24 @@
-import LayoutV1 from "@/components/layouts/LayoutV1";
-import BreadCrumb from "@/components/breadCrumb/BreadCrumb";
 
-export const metadata = {
-    title: "Terms & Conditions - Navigator System"
-};
+import type { Metadata } from 'next';
+import BreadCrumb from '@/components/breadCrumb/BreadCrumb';
+import TermsContent from '@/components/terms/TermsContent';
+import FooterV1 from '@/components/footer/Footer';
+import HeaderV3 from '@/components/header/Header';
 
-const TermsPage = () => {
+export const metadata: Metadata = {
+    title: "Terms & Conditions - Navigator System",
+    description: "Read our full terms and conditions for services, products, and Annual Maintenance Contracts."
+}
+
+const TermsConditions = () => {
     return (
-        <LayoutV1>
-            <BreadCrumb title="Terms & Conditions" breadCrumb="Terms" />
-            <div className="default-padding">
-                <div className="container">
-                    <div className="content">
-                        <h2>Terms & Conditions</h2>
-                        <p>Legal terms and conditions content goes here.</p>
-                    </div>
-                </div>
-            </div>
-        </LayoutV1>
+        <>
+            <HeaderV3 />
+            <BreadCrumb title="Terms & Conditions" breadCrumb="terms-conditions" />
+            <TermsContent />
+            <FooterV1 />
+        </>
     );
-};
+}
 
-export default TermsPage;
+export default TermsConditions;

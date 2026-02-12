@@ -14814,3 +14814,166 @@ footer.footer-style-two .f-item.about::after {
 .navbar-toggle .icon-bar:first-child {
 	display: none !important;
 }
+
+/* Blog Detail Modern Styles - Added for Standardization */
+.blog-content {
+	font-family: 'Outfit', sans-serif;
+	font-size: 19px;
+	line-height: 1.85;
+	color: #2C3E50;
+}
+
+.blog-content h2 {
+	font-size: 32px;
+	font-weight: 700;
+	color: #0e2769;
+	margin-top: 50px;
+	margin-bottom: 25px;
+}
+
+.blog-content h3 {
+	font-size: 26px;
+	font-weight: 700;
+	color: #0e2769;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.blog-content p {
+	margin-bottom: 24px;
+}
+
+.blog-content ul {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 40px;
+}
+
+.blog-content ul li {
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 15px;
+}
+
+.blog-content ul li::before {
+	content: '\f00c';
+	/* FontAwesome check */
+	font-family: 'Font Awesome 5 Pro';
+	position: absolute;
+	left: 0;
+	top: 6px;
+	/* Adjusted for alignment */
+	color: #1351d8;
+	font-weight: 900;
+	font-size: 14px;
+}
+
+.blog-content blockquote {
+	background: #f8f9fa;
+	border-left: 5px solid #1351d8;
+	padding: 30px 40px;
+	border-radius: 8px;
+	font-style: italic;
+	font-size: 22px;
+	color: #333;
+	margin: 40px 0;
+	position: relative;
+}
+
+
+/* ENHANCED BLOG AESTHETICS */
+.blog-content {
+	font-size: 1.125rem;
+	line-height: 1.85;
+	color: #475569;
+	/* Slate 600 */
+}
+
+.blog-content p {
+	margin-bottom: 1.75rem;
+	letter-spacing: 0.015em;
+}
+
+.blog-content h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #0f172a;
+	/* Slate 900 */
+	margin-top: 3.5rem;
+	margin-bottom: 1.5rem;
+	letter-spacing: -0.025em;
+	position: relative;
+	padding-left: 20px;
+	border-left: 5px solid #3b82f6;
+	/* Accent color */
+}
+
+.blog-content h3 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #1e293b;
+	/* Slate 800 */
+	margin-top: 2.5rem;
+	margin-bottom: 1.25rem;
+}
+
+.blog-content ul {
+	list-style-type: none;
+	padding-left: 0;
+	margin: 2rem 0;
+}
+
+.blog-content ul li {
+	padding-left: 1.5rem;
+	position: relative;
+	margin-bottom: 0.75rem;
+}
+
+.blog-content ul li::before {
+	content: "•";
+	color: #3b82f6;
+	position: absolute;
+	left: 0;
+	font-weight: bold;
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+
+.blog-content blockquote {
+	background: #f8fafc;
+	border-left: 4px solid #3b82f6;
+	padding: 2rem 3rem;
+	font-size: 1.25rem;
+	font-style: italic;
+	color: #334155;
+	margin: 3rem 0;
+	border-radius: 0 16px 16px 0;
+	position: relative;
+}
+
+.blog-content blockquote::before {
+	content: "“";
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	font-size: 4rem;
+	color: #cbd5e1;
+	font-family: serif;
+	line-height: 1;
+}
+
+.blog-content img {
+	border-radius: 12px;
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+	margin: 2.5rem 0;
+	transition: transform 0.3s ease;
+}
+
+.blog-content img:hover {
+	transform: scale(1.02);
+}
+
+.blog-content strong {
+	color: #0f172a;
+	font-weight: 700;
+}

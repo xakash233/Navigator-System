@@ -1,5 +1,6 @@
 import Image from "next/image";
 import CounterForm from "../form/CounterForm";
+import { siteContent } from "@/data/siteContent";
 
 const ContactV2 = () => {
     return (
@@ -16,35 +17,33 @@ const ContactV2 = () => {
                                 <p data-aos="fade-up" data-aos-delay="100">
                                     Whether you need to maintain critical infrastructure or build modern digital solutions, we are here to help.
                                 </p>
-                                <ul>
-                                    <li data-aos="fade-up">
-                                        <div className="icon">
-                                            <i className="fas fa-server" />
+
+                                <div className="row mt-50">
+                                    {/* Corporate Office */}
+                                    <div className="col-md-6 item text-center mb-30" data-aos="fade-up" data-aos-delay="200">
+                                        <div className="icon mb-20">
+                                            <i className="far fa-building fa-3x" style={{ color: '#1351d8' }}></i>
                                         </div>
-                                        <div className="content">
-                                            <h5 className="title">Support &amp; Maintenance</h5>
-                                            <p>Request AMC / Server / Network support</p>
+                                        <h4 className="title mb-15" style={{ fontSize: '22px', fontWeight: '700', color: '#0e2769' }}>Corporate Office</h4>
+                                        <p style={{ fontSize: '15px', lineHeight: '1.6', color: '#666' }}>
+                                            <strong>NAVIGATOR SYSTEMS PRIVATE LIMITED</strong><br />
+                                            {siteContent.brand.address}
+                                        </p>
+                                    </div>
+
+                                    {/* Direct Contact */}
+                                    <div className="col-md-6 item text-center mb-30" data-aos="fade-up" data-aos-delay="400">
+                                        <div className="icon mb-20">
+                                            <i className="fas fa-mobile-alt fa-3x" style={{ color: '#1351d8' }}></i>
                                         </div>
-                                    </li>
-                                    <li data-aos="fade-up" data-aos-delay="300">
-                                        <div className="icon">
-                                            <i className="fas fa-code" />
-                                        </div>
-                                        <div className="info">
-                                            <h5 className="title">Engineering Delivery</h5>
-                                            <p>Website, apps, cloud, automation</p>
-                                        </div>
-                                    </li>
-                                    <li data-aos="fade-up" data-aos-delay="500">
-                                        <div className="icon">
-                                            <i className="fas fa-handshake" />
-                                        </div>
-                                        <div className="info">
-                                            <h5 className="title">Partnerships</h5>
-                                            <p>Vendor and integration opportunities</p>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        <h4 className="title mb-15" style={{ fontSize: '22px', fontWeight: '700', color: '#0e2769' }}>Direct Contact</h4>
+                                        <p style={{ fontSize: '15px', lineHeight: '1.6', color: '#666' }}>
+                                            Sales: <a href={`tel:${siteContent.brand.phone.replace(/\s+/g, '')}`} style={{ color: '#666' }}>{siteContent.brand.phone}</a><br />
+                                            Email: <a href={`mailto:${siteContent.brand.email}`} style={{ color: '#1351d8' }}>{siteContent.brand.email}</a>
+                                        </p>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                         <div className="contact-stye-one col-lg-7 pl-60 pl-md-15 pl-xs-15">

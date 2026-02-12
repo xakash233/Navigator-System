@@ -40,3 +40,137 @@
     line-height: 31px;
     display: inline-block;
 }
+
+/* =========================================
+   Mobile Menu Overrides (Max-width: 991px)
+   ========================================= */
+
+@media only screen and (max-width: 991px) {
+
+    /* Ensure the mobile container is scrolling if content is long */
+    .navbar-collapse.collapse-mobile {
+        background: #ffffff;
+        padding: 20px;
+        overflow-y: auto;
+        max-height: 85vh;
+        /* Prevent covering the whole screen unnecessarily */
+        border-top: 1px solid #eee;
+    }
+
+    /* Reset Dropdown Positioning to Static for flow layout */
+    .navbar-nav .dropdown-menu {
+        position: static !important;
+        float: none !important;
+        width: 100% !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        margin: 0 !important;
+        padding-left: 15px !important;
+        /* Indent submenus */
+
+        /* Critical for animation */
+        display: block !important;
+        overflow: hidden !important;
+        transition: max-height 0.4s ease-in-out;
+
+        /* Default state is handled by inline style from useSubMenuToggle (max-height: 0) */
+    }
+
+    /* Styling for Main Menu Items */
+    .navbar-nav>li {
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+        margin: 0 !important;
+    }
+
+    .navbar-nav>li:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-nav>li>a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 5px !important;
+        color: #333 !important;
+        font-weight: 600;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    /* Active State Styling - REMOVE UNWANTED BORDERS/BACKGROUNDS */
+    .navbar-nav>li.dropdown.on>a {
+        color: #007bff !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        position: relative;
+        /* Ensure text visible */
+    }
+
+    /* Kill any theme active line/underline */
+    .navbar-nav li.dropdown.on>a::before,
+    .navbar-nav li.dropdown>a::before {
+        content: none !important;
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        background: transparent !important;
+        border: none !important;
+    }
+
+    /* Toggle Icon Rotation & FA5 Integration */
+    .navbar-nav>li.dropdown>a::after {
+        content: "\f078" !important;
+        /* FA5 Chevron Down */
+
+        font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free" !important;
+        font-weight: 900 !important;
+
+        transition: transform 0.3s ease;
+        margin-left: auto !important;
+        /* Push to right */
+        font-size: 12px;
+        color: #999;
+        /* Neutral color by default */
+
+        /* Reset theme underline styles */
+        width: auto !important;
+        height: auto !important;
+        position: static !important;
+        display: inline-block !important;
+        top: auto !important;
+        left: auto !important;
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .navbar-nav>li.dropdown.on>a::after {
+        transform: rotate(180deg);
+        color: #007bff;
+        /* Active color */
+    }
+
+    /* Submenu Link Styling */
+    .dropdown-menu>li>a {
+        color: #555 !important;
+        font-size: 14px !important;
+        padding: 8px 0 !important;
+        padding-left: 10px !important;
+        border-left: 2px solid #eee;
+        margin-left: 5px;
+        display: block;
+    }
+
+    .dropdown-menu>li>a:hover {
+        color: #007bff !important;
+        border-left-color: #007bff;
+        background: transparent !important;
+    }
+
+    /* Hide Sidebar Hamburger on Tablet/Mobile */
+    .attr-nav .side-menu {
+        display: none !important;
+    }
+}

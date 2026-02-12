@@ -9,30 +9,11 @@ interface SidebarInfoProps {
     openInfoBar: () => void;
     isInfoOpen: boolean;
     closeInfoBar: () => void;
-    searchOpen: () => void;
 }
 
-const SidebarInfo = ({ isInfoOpen, openInfoBar, closeInfoBar, searchOpen }: SidebarInfoProps) => {
+const SidebarInfo = ({ isInfoOpen, closeInfoBar }: SidebarInfoProps) => {
     return (
         <>
-            <div className="attr-right">
-                <div className="attr-nav attr-box">
-                    <ul>
-                        <li className="search">
-                            <Link href="#" onClick={searchOpen}>
-                                <i className="far fa-search" />
-                            </Link>
-                        </li>
-                        <li className="side-menu">
-                            <Link href="#" scroll={false} onClick={openInfoBar}>
-                                <span className="bar-2" />
-                                <span className="bar-3" />
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
             <div className={`side ${isInfoOpen ? "on" : ""}`}>
                 <Link href="#" className="close-side" onClick={closeInfoBar}><i className="icon_close" /></Link>
                 <div className="widget">

@@ -59,12 +59,12 @@ export const siteContent = {
             subtitle: "Overview",
             items: [
                 {
-                    icon: "icon-server.png",
+                    icon: "flaticon-network",
                     title: "Infrastructure Support",
                     description: "Server maintenance, AMC, network maintenance, data center support, helpdesk/FMS, and IT operations management."
                 },
                 {
-                    icon: "icon-7.png",
+                    icon: "flaticon-coding",
                     title: "Technology Delivery",
                     description: "Website & app development, UI/UX, branding, e-commerce, software engineering, cloud services, and AI automation."
                 }

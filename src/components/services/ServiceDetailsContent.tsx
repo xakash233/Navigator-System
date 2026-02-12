@@ -2,7 +2,6 @@ import Image from "next/image";
 import SingleFaq from "../faq/SingleFaq";
 import FaqV1Data from "@/assets/jsonData/faq/FaqV1Data.json"
 import Link from "next/link";
-import ServicesV1Data from "@/assets/jsonData/services/ServicesV1Data.json"
 import { siteContent } from "@/data/siteContent";
 
 interface DataType {

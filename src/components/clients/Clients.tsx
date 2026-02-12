@@ -2,6 +2,7 @@
 "use client"
 import React from 'react';
 
+import Image from "next/image";
 import { siteContent } from "@/data/siteContent";
 import SplitText from "../animation/SplitText";
 
@@ -39,13 +40,19 @@ const ClientsV1 = () => {
                                         }}
                                             onMouseEnter={(e) => { e.currentTarget.style.filter = 'grayscale(0%)'; e.currentTarget.style.opacity = '1'; }}
                                             onMouseLeave={(e) => { e.currentTarget.style.filter = 'grayscale(100%)'; e.currentTarget.style.opacity = '0.7'; }}>
-                                            <img src={client.logo} alt={client.name} style={{
-                                                width: '100%',
-                                                height: '100%',
-                                                objectFit: 'contain',
-                                                maxHeight: '80px',
-                                                maxWidth: '150px'
-                                            }} />
+                                            <Image
+                                                src={client.logo}
+                                                alt={client.name}
+                                                width={150}
+                                                height={80}
+                                                style={{
+                                                    objectFit: 'contain',
+                                                    maxHeight: '80px',
+                                                    maxWidth: '150px',
+                                                    width: 'auto',
+                                                    height: 'auto'
+                                                }}
+                                            />
                                         </div>
                                     </div>
                                 ))}
@@ -57,5 +64,6 @@ const ClientsV1 = () => {
         </div>
     );
 };
+
 
 export default ClientsV1;
