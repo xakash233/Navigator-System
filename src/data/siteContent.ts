@@ -236,7 +236,7 @@ export const siteContent = {
                 category: "infrastructure",
                 icon: "6.png",
                 title: "Helpdesk / FMS Assistance",
-                heroImage: "/assets/img/banner/6.jpg",
+                heroImage: "/assets/img/banner/infra-service.jpg",
                 summary: "24x7 helpdesk coverage and facilities management support to keep daily IT operations smooth — ideal for distributed sites and lean internal IT teams.",
                 features: [
                     "Ticketing, triage, escalation, and vendor coordination",
@@ -250,7 +250,7 @@ export const siteContent = {
                 id: "website-development",
                 category: "technology",
                 icon: "7.png",
-                heroImage: "/assets/img/banner/7.jpg",
+                heroImage: "/assets/img/banner/website-development.png",
                 title: "Website Development",
                 summary: "Modern, fast, secure websites that are easy to manage and built to convert — including corporate sites, service portals, and product websites.",
                 features: [
@@ -265,7 +265,7 @@ export const siteContent = {
                 id: "ui-ux-design",
                 category: "technology",
                 icon: "8.png",
-                heroImage: "/assets/img/banner/8.jpg",
+                heroImage: "/assets/img/banner/ui-ux-design.png",
                 title: "UI/UX Design",
                 summary: "User-first interface design that improves usability, reduces friction, and supports business outcomes — from websites to internal dashboards.",
                 features: [
@@ -273,13 +273,24 @@ export const siteContent = {
                     "Design system (colors, typography, components)",
                     "Accessibility and responsiveness guidelines",
                     "Developer-ready handoff (Figma specs + assets)"
-                ]
+                ],
+                whoIsItFor: [
+                    "Startups launching new digital products",
+                    "Enterprises modernizing legacy applications",
+                    "E-commerce businesses seeking higher conversion rates"
+                ],
+                keyBenefits: [
+                    "Enhanced user satisfaction and engagement",
+                    "Reduced development rework through clear prototyping",
+                    "Consistent brand experience across all platforms"
+                ],
+                ctaLine: "Transform your digital experience — request a UI/UX audit or design proposal."
             },
             {
                 id: "branding-strategy",
                 category: "technology",
                 icon: "9.png",
-                heroImage: "/assets/img/banner/9.jpg",
+                heroImage: "/assets/img/banner/branding-strategy.png",
                 title: "Branding & Strategy",
                 summary: "Brand foundations and messaging that clarify your positioning and make your digital presence consistent across touchpoints.",
                 features: [
@@ -293,7 +304,7 @@ export const siteContent = {
                 id: "mobile-app-development",
                 category: "technology",
                 icon: "10.png",
-                heroImage: "/assets/img/banner/10.jpg",
+                heroImage: "/assets/img/banner/mobile-app-development.png",
                 title: "Mobile App Development",
                 summary: "iOS/Android app development for customer apps and internal operations — built for performance, stability, and maintainability.",
                 features: [
@@ -307,7 +318,7 @@ export const siteContent = {
                 id: "ecommerce-solutions",
                 category: "technology",
                 icon: "11.png",
-                heroImage: "/assets/img/banner/hero-slide-2.jpg",
+                heroImage: "/assets/img/banner/ecommerce-solutions.png",
                 title: "E-Commerce Solutions",
                 summary: "E-commerce builds and upgrades that improve catalog management, payments, order operations, and customer experience.",
                 features: [
@@ -321,7 +332,7 @@ export const siteContent = {
                 id: "seo-sem",
                 category: "technology",
                 icon: "12.png",
-                heroImage: "/assets/img/banner/hero-slide-3.jpg",
+                heroImage: "/assets/img/banner/seo-sem.png",
                 title: "SEO & SEM",
                 summary: "Search visibility services focused on technical SEO, content structure, and measurable search performance — plus paid search campaigns where required for immediate demand.",
                 features: [
@@ -336,7 +347,7 @@ export const siteContent = {
                 id: "software-development",
                 category: "technology",
                 icon: "13.png",
-                heroImage: "/assets/img/banner/hero-slide-4.jpg",
+                heroImage: "/assets/img/banner/software-development.png",
                 title: "Software Development",
                 summary: "Custom software engineering for portals, internal tools, integrations, and business automation — with clean architecture and documentation.",
                 features: [
@@ -350,7 +361,7 @@ export const siteContent = {
                 id: "cloud-services",
                 category: "technology",
                 icon: "14.png",
-                heroImage: "/assets/img/banner/hero-slide-2.jpg",
+                heroImage: "/assets/img/banner/tech-service.jpg",
                 title: "Cloud Services",
                 summary: "Cloud strategy and implementation to improve reliability, scalability, and cost governance — including hybrid approaches where required.",
                 features: [
@@ -364,15 +375,30 @@ export const siteContent = {
                 id: "ai-automation",
                 category: "technology",
                 icon: "15.png",
-                heroImage: "/assets/img/banner/tech-service.jpg",
-                title: "AI / Automation",
-                summary: "Practical automation and AI-assisted workflows to reduce repetitive work, improve response times, and create better visibility for operations.",
+                heroImage: "/assets/img/banner/ai-automation.png",
+                title: "AI & Automation Solutions",
+                summary: "Empower your business with intelligent automation and AI-driven insights. We help organizations streamline operations, reduce manual effort, and unlock new value through practical, scalable AI solutions tailored to your specific workflows.",
                 features: [
-                    "Automated ticket triage and routing",
-                    "Predictive alerts and anomaly detection (where data exists)",
-                    "Chatbot/virtual assistant for internal support",
-                    "Document processing and structured reporting"
-                ]
+                    "Intelligent Process Automation (IPA) for repetitive tasks",
+                    "AI-powered Chatbots & Virtual Assistants for 24/7 support",
+                    "Predictive Analytics & Anomaly Detection for proactive maintenance",
+                    "Automated Ticket Triage & Routing for IT operations",
+                    "Document Understanding (OCR/NLP) for automated data entry",
+                    "Custom AI Model Development for specific business needs"
+                ],
+                whoIsItFor: [
+                    "Enterprises looking to reduce operational overhead",
+                    "Customer support teams needing 24/7 coverage",
+                    "IT teams overwhelmed by manual ticket handling",
+                    "Businesses with large volumes of unstructured data"
+                ],
+                keyBenefits: [
+                    "Significant reduction in manual processing time",
+                    "Improved accuracy and consistency in operations",
+                    "24/7 availability for customer and employee support",
+                    "Data-driven insights for better decision making"
+                ],
+                ctaLine: "Ready to automate? Let's identify the highest-ROI opportunities in your workflow."
             }
         ]
     }
