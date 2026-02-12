@@ -5,7 +5,7 @@ import SplitText from "../animation/SplitText";
 const FeatureV2 = () => {
     return (
         <>
-            <div className="feature-style-two-area default-padding bottom-less">
+            <div className="feature-style-two-area default-padding bottom-less" style={{ paddingTop: '50px' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2">
