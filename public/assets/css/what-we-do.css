@@ -1,30 +1,29 @@
-/* Feature/What We Do Card Styles - Robust Layout Fix */
+/* Feature/What We Do Card Styles - Enhanced Visual Appeal */
 .feature-style-two {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 40px 30px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 24px;
+    padding: 45px 35px;
     position: relative;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    /* Soft shadow */
-    border: 1px solid rgba(0, 0, 0, 0.03);
-    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border: 2px solid rgba(0, 123, 255, 0.1);
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-start !important;
+    align-items: center !important;
     justify-content: flex-start !important;
+    text-align: center !important;
     height: 100%;
-    min-height: 320px;
-    /* Ensure minimum height */
+    min-height: 340px;
+    z-index: 1;
 }
 
-/* Hover State - Lift and Glow */
+/* Hover State - Enhanced Lift and Glow */
 .feature-style-two:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 123, 255, 0.15) !important;
-    /* Blue-ish shadow */
-    border-color: rgba(0, 123, 255, 0.1);
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(0, 123, 255, 0.25) !important;
+    border-color: rgba(0, 123, 255, 0.4);
+    background: linear-gradient(135deg, #ffffff 0%, #ebf8ff 100%);
 }
 
 /* Background gradient effect on hover */
@@ -35,63 +34,58 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(0, 123, 255, 0.03) 100%);
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.05) 0%, rgba(0, 123, 255, 0.15) 100%);
     opacity: 0;
     z-index: -1;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.5s ease;
 }
 
 .feature-style-two:hover::before {
     opacity: 1;
 }
 
-/* Icon Container Styling */
+/* Icon Container Styling - VISIBLE & CENTERED */
 .feature-style-two .icon {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-    /* Light Blue Gradient default */
-    border-radius: 50% !important;
-    /* Force Circle */
+    border-radius: 20px;
     display: flex !important;
     align-items: center;
     justify-content: center;
-    margin-bottom: 25px !important;
-    /* Force Spacing */
+    margin-bottom: 60px !important;
     transition: all 0.4s ease;
     flex-shrink: 0;
     position: relative !important;
-    /* Ensure flow */
     z-index: 2;
-    top: auto;
-    left: auto;
-    float: none;
+    /* Centering is handled by parent align-items: center, but explicit margin auto can help if needed */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Icon Symbol Styling */
 .feature-style-two .icon i {
-    font-size: 36px;
+    font-size: 48px;
     color: #007bff;
-    /* Primary Blue */
     transition: all 0.4s ease;
     line-height: 1;
     position: relative;
     z-index: 3;
 }
 
-/* Icon Hover Animation: Fill with color and rotate */
+/* Icon Hover Animation */
 .feature-style-two:hover .icon {
-    background: #007bff;
-    transform: scale(1.1) rotate(-10deg);
-    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
 }
 
 .feature-style-two:hover .icon i {
     color: #ffffff;
-    transform: rotate(10deg);
+    transform: rotate(5deg);
 }
 
-/* Typography */
+/* Typography - Enhanced */
 .feature-style-two .info {
     width: 100%;
     position: relative;
@@ -99,23 +93,28 @@
 }
 
 .feature-style-two .info h4 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 18px;
     color: #1a202c;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     display: block;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
 }
 
 .feature-style-two:hover .info h4 {
     color: #007bff;
+    /* Removed translateX since we are centered, maybe scale slightly? */
+    /* transform: translateX(5px); */
 }
 
 .feature-style-two .info p {
-    color: #718096;
+    color: #4a5568;
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 0;
+    font-weight: 400;
 }
 
 /* Decorative Dot Pattern Background */

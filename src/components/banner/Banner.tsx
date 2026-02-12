@@ -8,9 +8,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import React, { useState } from 'react';
 
 const BannerV3 = () => {
     const { heroSlider } = siteContent.home;
+    const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
+    const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
 
     return (
         <>
@@ -22,8 +25,8 @@ const BannerV3 = () => {
                     autoplay={{ delay: 5000, disableOnInteraction: false }}
                     pagination={{ clickable: true }}
                     navigation={{
-                        nextEl: ".banner-button-next",
-                        prevEl: ".banner-button-prev"
+                        prevEl,
+                        nextEl,
                     }}
                     className="banner-style-three-carousel"
                 >
@@ -56,40 +59,64 @@ const BannerV3 = () => {
                         </SwiperSlide>
                     ))}
                     {/* Custom Nav Buttons */}
-                    <div className="banner-button-prev" style={{
+                    <div ref={(node) => setPrevEl(node)} className="banner-button-prev" style={{
                         position: 'absolute',
                         left: '50px',
                         top: '50%',
                         transform: 'translateY(-50%)',
                         width: '60px',
                         height: '60px',
-                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                        border: '1px solid rgba(255, 255, 255, 0.2)',
+                        backdropFilter: 'blur(50px)',
                         color: '#fff',
                         borderRadius: '50%',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         cursor: 'pointer',
-                        zIndex: 10
-                    }}>
+                        zIndex: 10,
+                        transition: 'all 0.3s'
+                    }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+                            e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                            e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
+                        }}
+                    >
                         <i className="fas fa-chevron-left" style={{ fontSize: '24px' }}></i>
                     </div>
-                    <div className="banner-button-next" style={{
+                    <div ref={(node) => setNextEl(node)} className="banner-button-next" style={{
                         position: 'absolute',
                         right: '50px',
                         top: '50%',
                         transform: 'translateY(-50%)',
                         width: '60px',
                         height: '60px',
-                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                        border: '1px solid rgba(255, 255, 255, 0.2)',
+                        backdropFilter: 'blur(5px)',
                         color: '#fff',
                         borderRadius: '50%',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         cursor: 'pointer',
-                        zIndex: 10
-                    }}>
+                        zIndex: 10,
+                        transition: 'all 0.3s'
+                    }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+                            e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                            e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
+                        }}
+                    >
                         <i className="fas fa-chevron-right" style={{ fontSize: '24px' }}></i>
                     </div>
                 </Swiper>

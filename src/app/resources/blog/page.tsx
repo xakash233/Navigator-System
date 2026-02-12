@@ -3,7 +3,7 @@ import BreadCrumb from "@/components/breadCrumb/BreadCrumb";
 import LayoutV1 from "@/components/layouts/LayoutV1";
 
 export const metadata = {
-    title: "Tekni - Blog 3 Column"
+    title: "Navigator System - Blog"
 };
 
 
@@ -11,7 +11,7 @@ const Blog3ColumnPage = () => {
     return (
         <>
             <LayoutV1>
-                <BreadCrumb title="Blog Grid" breadCrumb="blog-3-column" />
+                <BreadCrumb title="Blog" breadCrumb="blog" />
                 <Blog3ColumnContent />
             </LayoutV1>
         </>

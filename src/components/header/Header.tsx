@@ -5,8 +5,6 @@ import Link from "next/link";
 import useSidebarMenu from "@/hooks/useSidebarMenu";
 import useSidebarInfo from "@/hooks/useSidebarInfo";
 import SidebarInfo from "./SidebarInfo";
-import HeaderSearch from "./HeaderSearch";
-import useSearchBar from "@/hooks/useSearchBar";
 
 import { siteContent } from "@/data/siteContent";
 
@@ -14,14 +12,11 @@ const HeaderV3 = () => {
 
     const { isOpens, openMenu, closeMenu } = useSidebarMenu();
     const { isInfoOpen, openInfoBar, closeInfoBar } = useSidebarInfo();
-    const { openSearch, searchOpen, searchClose } = useSearchBar();
 
     return (
         <>
             <header>
                 <nav className="navbar mobile-sidenav navbar-theme-secodnary navbar-common navbar-sticky navbar-default validnavs on no-full sticked">
-
-                    <HeaderSearch openSearch={openSearch} searchClose={searchClose} searchOpen={searchOpen} />
 
                     <div className="container nav-box d-flex justify-content-between align-items-center">
                         <div className="navbar-header">
@@ -47,7 +42,7 @@ const HeaderV3 = () => {
                             </div>
 
                             {/* Sidebar Info */}
-                            <SidebarInfo openInfoBar={openInfoBar} isInfoOpen={isInfoOpen} closeInfoBar={closeInfoBar} searchOpen={searchOpen} />
+                            <SidebarInfo openInfoBar={openInfoBar} isInfoOpen={isInfoOpen} closeInfoBar={closeInfoBar} />
                             <div className="overlay-screen" />
                         </div>
                     </div>

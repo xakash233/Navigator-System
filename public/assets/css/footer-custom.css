@@ -1,87 +1,165 @@
-/* Footer Custom Overrides */
+/* Footer Enhanced Styling - Dark Theme */
 
-/* Remove any unwanted background color on hover for footer links */
-footer a:hover,
-.footer-item a:hover,
-.f-item a:hover,
-.footer-item ul li a:hover {
-    background: transparent !important;
-    background-color: transparent !important;
-    color: #007bff !important;
-    /* Set text color to primary blue on hover */
+/* Main Footer Container */
+.footer-enhanced-dark {
+    background-color: #0f172a !important;
+    /* Deep Navy/Black */
+    color: #cbd5e1 !important;
+    /* Light Slate Grey text */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Pattern Overlay Adjustment */
+.footer-enhanced-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
+    z-index: 0;
+}
+
+.footer-enhanced-dark .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Headings */
+.widget-title {
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+/* Contact Info Styling */
+.contact-info .icon i {
+    font-size: 18px;
+    color: #3b82f6 !important;
+    /* Bright Blue */
+}
+
+/* Links List Styling */
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links li a {
+    color: #94a3b8 !important;
+    /* Muted Slate */
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-links li a:hover {
+    color: #ffffff !important;
+    transform: translateX(5px);
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Hover Primary Utility */
+.hover-primary:hover {
+    color: #3b82f6 !important;
     text-decoration: none !important;
-    padding-left: 5px;
-    /* Add a slight shift for effect if desired, or remove */
+}
+
+/* Newsletter Input - Dark Theme */
+.f-item.newsletter input.form-control {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+    height: 60px;
+    border-radius: 50px !important;
+    /* Rounded pill shape */
+    padding-left: 25px;
+    padding-right: 60px;
+    /* Space for the button */
     transition: all 0.3s ease;
 }
 
-/* Ensure no block background on list items either */
-.footer-item ul li:hover {
-    background: transparent !important;
+.f-item.newsletter input.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3) !important;
 }
 
-/* Newsletter Container */
+/* Newsletter Form Container */
 .f-item.newsletter form {
     position: relative;
-    /* Remove any border on the form itself if present, we style the input */
-    border: none;
-    background: transparent;
-    padding: 0;
+    display: block;
 }
 
-/* Newsletter Input Styling - Perfect Blue Box */
-.f-item.newsletter input.form-control {
-    border: 2px solid #007bff !important;
-    /* Solid Brand Blue Border */
-    background-color: #ffffff !important;
-    /* Solid White Background */
-    border-radius: 4px !important;
-    /* Slight rounding for clean box look */
-    padding: 12px 15px;
-    /* Comfortable padding */
-    padding-right: 50px;
-    /* Space for the button */
-    width: 100%;
-    color: #333;
-    font-size: 15px;
-    height: 52px;
-    /* Fixed height for consistency */
-    box-shadow: none !important;
-    /* Remove default shadows */
-    outline: none !important;
-    /* Remove default outline */
-}
-
-/* Focus State */
-.f-item.newsletter input.form-control:focus {
-    border-color: #0056b3 !important;
-    /* Darker blue on focus */
-}
-
-/* Submit Button Positioning */
+/* Newsletter Button */
 .f-item.newsletter button {
     position: absolute;
-    right: 15px;
-    /* Properly specific padding from right */
+    right: 5px;
     top: 50%;
     transform: translateY(-50%);
-    background: transparent;
+    width: 48px;
+    height: 48px;
+    background-color: #ffffff;
+    border-radius: 50%;
     border: none;
-    cursor: pointer;
-    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
 }
 
-/* SVG Icon Color inside button */
+.f-item.newsletter button:hover {
+    background-color: #f1f5f9;
+    transform: translateY(-50%) scale(1.05);
+    /* Subtle zoom effect */
+}
+
 .f-item.newsletter button svg path {
-    stroke: #007bff;
-    /* Make the arrow blue too */
+    stroke: #3b82f6;
+    /* Blue arrow */
     stroke-width: 2;
+    transition: stroke 0.3s ease;
 }
 
 .f-item.newsletter button:hover svg path {
-    stroke: #0056b3;
+    stroke: #2563eb;
+    /* Darker blue on hover */
+}
+
+/* Social Icons */
+.footer-social li a {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.footer-social li a:hover {
+    background: #3b82f6 !important;
+    border-color: #3b82f6 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+    background-color: #020617 !important;
+    /* Even Darker */
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.footer-bottom-links li a {
+    color: #64748b !important;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-links li a:hover {
+    color: #3b82f6 !important;
 }

@@ -19,8 +19,8 @@ const SingleFeatureV2 = ({ feature }: { feature: DataType }) => {
                         <Image
                             src={`/assets/img/icon/${icon}`}
                             alt={title}
-                            width={50}
-                            height={50}
+                            width={60}
+                            height={60}
                             style={{ objectFit: 'contain' }}
                         />
                     ) : (
