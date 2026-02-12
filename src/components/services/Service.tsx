@@ -24,7 +24,7 @@ const ServiceV3 = () => {
     return (
         <>
 
-            <div className="services-style-three-area default-padding-top half-bg-dark" style={{ backgroundImage: 'url(/assets/img/shape/service_bg_shape.png)', paddingBottom: '80px' }}>
+            <div className="services-style-three-area default-padding-top half-bg-dark" style={{ backgroundImage: 'url(/assets/img/shape/service_bg_shape.png)', paddingBottom: '80px', paddingTop: '10px' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2">

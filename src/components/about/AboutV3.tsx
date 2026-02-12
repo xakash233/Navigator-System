@@ -5,7 +5,7 @@ import SplitText from "../animation/SplitText";
 const AboutV3 = () => {
     return (
         <>
-            <div className="about-style-three-area overflow-hidden bg-gray default-padding-top">
+            <div className="about-style-three-area overflow-hidden bg-gray default-padding" style={{ paddingTop: '50px' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12 about-style-three">

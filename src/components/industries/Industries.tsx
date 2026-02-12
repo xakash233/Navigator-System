@@ -5,7 +5,7 @@ import SplitText from "../animation/SplitText";
 
 const IndustriesV1 = () => {
     return (
-        <div className="industries-area default-padding-bottom bg-gray" style={{ paddingTop: '80px' }}>
+        <div className="industries-area default-padding-bottom bg-gray" style={{ paddingTop: '10px' }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 offset-lg-2">

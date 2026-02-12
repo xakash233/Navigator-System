@@ -58,17 +58,15 @@ const BannerV3 = () => {
                             </div>
                         </SwiperSlide>
                     ))}
-                    {/* Custom Nav Buttons */}
+                    {/* Custom Nav Buttons - Bottom Right */}
                     <div ref={(node) => setPrevEl(node)} className="banner-button-prev" style={{
                         position: 'absolute',
-                        left: '50px',
-                        top: '50%',
-                        transform: 'translateY(-50%)',
+                        right: '120px',
+                        bottom: '100px',
                         width: '60px',
                         height: '60px',
-                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                        border: '1px solid rgba(255, 255, 255, 0.2)',
-                        backdropFilter: 'blur(50px)',
+                        backgroundColor: 'transparent',
+                        border: 'none',
                         color: '#fff',
                         borderRadius: '50%',
                         display: 'flex',
@@ -76,29 +74,25 @@ const BannerV3 = () => {
                         justifyContent: 'center',
                         cursor: 'pointer',
                         zIndex: 10,
-                        transition: 'all 0.3s'
+                        transition: 'transform 0.3s ease'
                     }}
                         onMouseEnter={(e) => {
-                            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
-                            e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)';
+                            e.currentTarget.style.transform = 'scale(1.2)';
                         }}
                         onMouseLeave={(e) => {
-                            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-                            e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
+                            e.currentTarget.style.transform = 'scale(1)';
                         }}
                     >
-                        <i className="fas fa-chevron-left" style={{ fontSize: '24px' }}></i>
+                        <i className="fas fa-angle-left" style={{ fontSize: '40px', textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}></i>
                     </div>
                     <div ref={(node) => setNextEl(node)} className="banner-button-next" style={{
                         position: 'absolute',
                         right: '50px',
-                        top: '50%',
-                        transform: 'translateY(-50%)',
+                        bottom: '100px',
                         width: '60px',
                         height: '60px',
-                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                        border: '1px solid rgba(255, 255, 255, 0.2)',
-                        backdropFilter: 'blur(5px)',
+                        backgroundColor: 'transparent',
+                        border: 'none',
                         color: '#fff',
                         borderRadius: '50%',
                         display: 'flex',
@@ -106,18 +100,16 @@ const BannerV3 = () => {
                         justifyContent: 'center',
                         cursor: 'pointer',
                         zIndex: 10,
-                        transition: 'all 0.3s'
+                        transition: 'transform 0.3s ease'
                     }}
                         onMouseEnter={(e) => {
-                            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
-                            e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)';
+                            e.currentTarget.style.transform = 'scale(1.2)';
                         }}
                         onMouseLeave={(e) => {
-                            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-                            e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
+                            e.currentTarget.style.transform = 'scale(1)';
                         }}
                     >
-                        <i className="fas fa-chevron-right" style={{ fontSize: '24px' }}></i>
+                        <i className="fas fa-angle-right" style={{ fontSize: '40px', textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}></i>
                     </div>
                 </Swiper>
             </div>

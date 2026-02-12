@@ -74,6 +74,11 @@
         overflow: hidden !important;
         transition: max-height 0.4s ease-in-out;
 
+        /* Ensure visibility regardless of hover state */
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+
         /* Default state is handled by inline style from useSubMenuToggle (max-height: 0) */
     }
 
