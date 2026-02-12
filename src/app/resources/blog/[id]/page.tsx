@@ -5,6 +5,7 @@ import LayoutV1 from "@/components/layouts/LayoutV1";
 import BreadCrumb from "@/components/breadCrumb/BreadCrumb";
 import Image from "next/image";
 import Link from "next/link";
+import TableOfContents from "@/components/blog/TableOfContents";
 
 export async function generateStaticParams() {
     return BlogV1Data.map((blog) => ({
@@ -29,6 +30,17 @@ const BlogDetails = async ({ params }: { params: Promise<{ id: string }> }) => {
         notFound();
     }
 
+    // Process content to add IDs to headings and generate TOC
+    const toc: { id: string; text: string; level: number }[] = [];
+    let processedContent = blog.fullContent || `<p>${blog.excerpt}</p>`;
+
+    // Simple regex to find h2 and h3
+    processedContent = processedContent.replace(/<(h[23])>(.*?)<\/\1>/g, (match, tag, content) => {
+        const id = content.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        toc.push({ id, text: content, level: parseInt(tag.charAt(1)) });
+        return `<${tag} id="${id}">${content}</${tag}>`;
+    });
+
     return (
         <LayoutV1>
             <BreadCrumb title={blog.title} breadCrumb="blog-details" />
@@ -36,7 +48,13 @@ const BlogDetails = async ({ params }: { params: Promise<{ id: string }> }) => {
                 <div className="container">
                     <div className="blog-items clearfix">
                         <div className="row">
-                            <div className="col-lg-10 offset-lg-1 info">
+                            {/* TOC Sidebar - Sticky on Desktop */}
+                            <div className="col-lg-3 order-lg-last">
+                                <TableOfContents toc={toc} />
+                            </div>
+
+                            {/* Main Content Area */}
+                            <div className="col-lg-9 order-lg-first info">
                                 <div className="item" style={{ border: 'none', boxShadow: 'none' }}>
 
                                     {/* Back Button */}
@@ -49,7 +67,7 @@ const BlogDetails = async ({ params }: { params: Promise<{ id: string }> }) => {
                                             fontWeight: 700,
                                             color: '#0e2769',
                                             background: '#ffffff',
-                                            padding: '12px 28px',
+                                            padding: '8px 20px',
                                             borderRadius: '50px',
                                             border: '1px solid #e0e0e0',
                                             boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
@@ -57,55 +75,62 @@ const BlogDetails = async ({ params }: { params: Promise<{ id: string }> }) => {
                                             transition: '0.3s'
                                         }}>
                                             <i className="fas fa-arrow-left" style={{ color: '#1351d8', fontSize: '14px' }}></i>
-                                            BACK TO BLOGS
+                                            BACK
                                         </Link>
                                     </div>
 
                                     {/* Header Section */}
-                                    <div className="content-box" style={{ padding: '0 0 40px 0' }}>
-                                        <div className="meta" style={{ marginBottom: '20px' }}>
-                                            <ul style={{ display: 'flex', gap: '25px', listStyle: 'none', padding: 0, fontSize: '14px', color: '#666', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '1px' }}>
-                                                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                                    <i className="fas fa-user-circle" style={{ color: '#1351d8', fontSize: '16px' }}></i>
+                                    <div className="content-box" style={{ padding: '0 0 30px 0' }}>
+                                        <div className="meta" style={{ marginBottom: '15px' }}>
+                                            <ul style={{ display: 'flex', gap: '20px', listStyle: 'none', padding: 0, fontSize: '13px', color: '#666', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '1px' }}>
+                                                <li style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                                    <i className="fas fa-user-circle" style={{ color: '#1351d8', fontSize: '14px' }}></i>
                                                     <span>{blog.author}</span>
                                                 </li>
-                                                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                                    <i className="fas fa-calendar-alt" style={{ color: '#1351d8', fontSize: '16px' }}></i>
+                                                <li style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                                    <i className="fas fa-calendar-alt" style={{ color: '#1351d8', fontSize: '14px' }}></i>
                                                     <span>{blog.date}</span>
                                                 </li>
                                             </ul>
                                         </div>
-                                        <h1 style={{ fontSize: '42px', fontWeight: 800, color: '#0e2769', lineHeight: '1.2', marginBottom: '10px' }}>
+                                        <h1 style={{ fontSize: '32px', fontWeight: 800, color: '#0e2769', lineHeight: '1.2', marginBottom: '10px' }}>
                                             {blog.title}
                                         </h1>
                                     </div>
 
-                                    {/* Featured Image */}
-                                    <div className="thumb" style={{ marginBottom: '50px', position: 'relative', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
+                                    {/* Featured Image - Smaller Size */}
+                                    <div className="thumb" style={{
+                                        marginBottom: '30px',
+                                        position: 'relative',
+                                        borderRadius: '10px',
+                                        overflow: 'hidden',
+                                        boxShadow: '0 10px 20px rgba(0,0,0,0.05)',
+                                        maxWidth: '100%',
+                                        height: '350px' // Constrain height
+                                    }}>
                                         <Image
                                             src={blog.thumb}
                                             alt={blog.title}
-                                            width={1200}
-                                            height={600}
-                                            style={{ width: '100%', height: 'auto', display: 'block' }}
+                                            fill
+                                            style={{ objectFit: 'cover' }}
                                             unoptimized={blog.thumb.startsWith('http')}
                                             priority
                                         />
                                     </div>
 
                                     {/* Content Body */}
-                                    <div className="blog-content" style={{ fontSize: '19px', lineHeight: '1.85', color: '#2C3E50', fontFamily: 'Outfit, sans-serif' }}>
-                                        <div dangerouslySetInnerHTML={{ __html: blog.fullContent || `<p>${blog.excerpt}</p>` }} />
+                                    <div className="blog-content" style={{ fontSize: '17px', lineHeight: '1.75', color: '#2C3E50', fontFamily: 'Outfit, sans-serif' }}>
+                                        <div dangerouslySetInnerHTML={{ __html: processedContent }} />
                                     </div>
 
                                     {/* Footer */}
-                                    <div style={{ marginTop: '60px', paddingTop: '40px', borderTop: '1px solid #e0e0e0', display: 'flex', alignItems: 'center', gap: '20px' }}>
-                                        <div style={{ width: '60px', height: '60px', background: '#eef2f7', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '24px', color: '#1351d8' }}>
+                                    <div style={{ marginTop: '50px', paddingTop: '30px', borderTop: '1px solid #e0e0e0', display: 'flex', alignItems: 'center', gap: '15px' }}>
+                                        <div style={{ width: '50px', height: '50px', background: '#eef2f7', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '20px', color: '#1351d8' }}>
                                             <i className="fas fa-user-tie"></i>
                                         </div>
                                         <div>
-                                            <h5 style={{ margin: 0, fontSize: '18px', fontWeight: 700 }}>Written by Navigator System</h5>
-                                            <p style={{ margin: 0, fontSize: '15px', color: '#777' }}>Experts in Server Maintenance & IT Infrastructure Solutions.</p>
+                                            <h5 style={{ margin: 0, fontSize: '16px', fontWeight: 700 }}>Written by Navigator System</h5>
+                                            <p style={{ margin: 0, fontSize: '14px', color: '#777' }}>Experts in Server Maintenance & IT Infrastructure Solutions.</p>
                                         </div>
                                     </div>
 

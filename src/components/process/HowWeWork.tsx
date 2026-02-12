@@ -5,7 +5,7 @@ import SplitText from "../animation/SplitText";
 
 const HowWeWorkV1 = () => {
     return (
-        <div className="process-area default-padding">
+        <div className="process-area default-padding" style={{ paddingTop: '50px' }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 offset-lg-2">

@@ -38,15 +38,15 @@ const ServiceV3 = () => {
                         </div>
                     </div>
                 </div>
-                <div className="container container-stage">
+                <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
                             <Swiper className="services-carousel" data-aos="fade-up" data-aos-delay="100"
                                 loop={true}
-                                freeMode={true}
                                 grabCursor={true}
                                 slidesPerView={1}
                                 spaceBetween={30}
+                                centeredSlides={true}
                                 autoplay={{ delay: 3000, disableOnInteraction: false }}
 
                                 // If we need pagination
@@ -63,12 +63,15 @@ const ServiceV3 = () => {
                                 breakpoints={{
                                     800: {
                                         slidesPerView: 2,
+                                        centeredSlides: false,
                                     },
                                     992: {
                                         slidesPerView: 3,
+                                        centeredSlides: true,
                                     },
                                     1367: {
                                         slidesPerView: 3,
+                                        centeredSlides: true,
                                     },
                                 }}
                                 modules={[Pagination, Navigation, Keyboard, Autoplay]}
@@ -81,7 +84,7 @@ const ServiceV3 = () => {
 
                             </Swiper>
 
-                            <div className="services-swiper-nav">
+                            <div className="services-swiper-nav" style={{ bottom: "10px" }}>
                                 {/* Pagination */}
                                 <div className="services-pagination" />
                                 <div className="services-button-prev"></div>

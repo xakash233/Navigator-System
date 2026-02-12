@@ -23,7 +23,7 @@ const ServiceDetail = ({ service }: { service: ServiceData }) => {
     const otherServices = allServices.filter(s => s.id !== service.id).slice(0, 5);
 
     return (
-        <div className="services-details-area overflow-hidden default-padding">
+        <div id="service-details-section" className="services-details-area overflow-hidden default-padding" style={{ scrollMarginTop: '140px' }}>
             <div className="container">
                 <div className="services-details-items">
                     <div className="row">
@@ -128,7 +128,7 @@ const ServiceDetail = ({ service }: { service: ServiceData }) => {
                                     <ul>
                                         {allServices.map(s => (
                                             <li key={s.id} className={s.id === service.id ? "current-item" : ""}>
-                                                <Link href={`/${s.category}/${s.id}`}>{s.title}</Link>
+                                                <Link href={`/${s.category}/${s.id}#service-details-section`} scroll={true}>{s.title}</Link>
                                             </li>
                                         ))}
                                     </ul>
@@ -139,7 +139,7 @@ const ServiceDetail = ({ service }: { service: ServiceData }) => {
                             <div className="single-widget bg-dark quick-contact-widget text-light"
                                 style={{ backgroundImage: 'url(/assets/img/shape/15.png)' }}>
                                 <div className="content">
-                                    <h3>Need Help?</h3>
+                                    <h3 style={{ color: '#ffffffff' }}>Need Help?</h3>
                                     <p>
                                         Speak with an engineer or get a quote for your infrastructure needs.
                                     </p>
